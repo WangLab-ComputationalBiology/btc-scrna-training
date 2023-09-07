@@ -1,0 +1,1168 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/command-line-interface/">
+      
+      
+        <link rel="prev" href="../workflow-and-modules/">
+      
+      
+        <link rel="next" href="../contributing/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>Command-line interface - BTC scRNA-Seq Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#command-line-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="BTC scRNA-Seq Material" class="md-header__button md-logo" aria-label="BTC scRNA-Seq Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BTC scRNA-Seq Material
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Command-line interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="BTC scRNA-Seq Material" class="md-nav__button md-logo" aria-label="BTC scRNA-Seq Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    BTC scRNA-Seq Material
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample and QC filtering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-correction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch correction and evaluation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cell-annotation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cell annotation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cell-communcation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cell-cell communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trajectory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cell trajectory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meta-programs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Malignant meta-programs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow-and-modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflows and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Command-line interface
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Command-line interface
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-parameters" class="md-nav__link">
+    Project parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control-parameters" class="md-nav__link">
+    Quality Control parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalization-parameters" class="md-nav__link">
+    Normalization parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clustering-parameters" class="md-nav__link">
+    Clustering parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stratification-parameters" class="md-nav__link">
+    Stratification parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-annotations-parameters" class="md-nav__link">
+    Cell annotations parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-correction-parameters" class="md-nav__link">
+    Batch correction parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-evaluation-parameters" class="md-nav__link">
+    Batch Evaluation parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-parameters" class="md-nav__link">
+    Differential Expression parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-program-parameters" class="md-nav__link">
+    Meta-program parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-parameters" class="md-nav__link">
+    Project parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control-parameters" class="md-nav__link">
+    Quality Control parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalization-parameters" class="md-nav__link">
+    Normalization parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clustering-parameters" class="md-nav__link">
+    Clustering parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stratification-parameters" class="md-nav__link">
+    Stratification parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-annotations-parameters" class="md-nav__link">
+    Cell annotations parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-correction-parameters" class="md-nav__link">
+    Batch correction parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-evaluation-parameters" class="md-nav__link">
+    Batch Evaluation parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-parameters" class="md-nav__link">
+    Differential Expression parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-program-parameters" class="md-nav__link">
+    Meta-program parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="command-line-interface">Command-line interface</h1>
+<h2 id="project-parameters">Project parameters</h2>
+<p>Reference genome-related files and options required for the workflow.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample_table</code></td>
+<td>Path to sample table</td>
+<td><code>string</code></td>
+<td>./assets/test_sample_table.csv</td>
+</tr>
+<tr>
+<td><code>meta_data</code></td>
+<td>Path to meta-data</td>
+<td><code>string</code></td>
+<td>./assets/test_meta_data.csv</td>
+</tr>
+<tr>
+<td><code>project_name</code></td>
+<td>Project name</td>
+<td><code>string</code></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><code>cancer_type</code></td>
+<td>Enter the cancer type</td>
+<td><code>string</code></td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>genome</code></td>
+<td>Enter genome name</td>
+<td><code>string</code></td>
+<td>GRCh38</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quality-control-parameters">Quality Control parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>thr_estimate_n_cells</code></td>
+<td>Estimated number of cells</td>
+<td><code>integer</code></td>
+<td>300</td>
+</tr>
+<tr>
+<td><code>thr_mean_reads_per_cells</code></td>
+<td>Mean reads per cell</td>
+<td><code>integer</code></td>
+<td>25000</td>
+</tr>
+<tr>
+<td><code>thr_median_genes_per_cell</code></td>
+<td>Median genes per cell</td>
+<td><code>integer</code></td>
+<td>900</td>
+</tr>
+<tr>
+<td><code>thr_median_umi_per_cell</code></td>
+<td>Median UMI per cell</td>
+<td><code>integer</code></td>
+<td>1000</td>
+</tr>
+<tr>
+<td><code>thr_n_feature_rna_min</code></td>
+<td>Minimum features per cell</td>
+<td><code>integer</code></td>
+<td>300</td>
+</tr>
+<tr>
+<td><code>thr_n_feature_rna_max</code></td>
+<td>Maximum features per cell</td>
+<td><code>integer</code></td>
+<td>7500</td>
+</tr>
+<tr>
+<td><code>thr_percent_mito</code></td>
+<td>Percentage of mitochondrial genes</td>
+<td><code>integer</code></td>
+<td>25</td>
+</tr>
+<tr>
+<td><code>thr_n_observed_cells</code></td>
+<td>Number of observed cells</td>
+<td><code>integer</code></td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+<h2 id="normalization-parameters">Normalization parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>thr_n_features</code></td>
+<td>Number features for FindVariableFeatures</td>
+<td><code>integer</code></td>
+<td>2000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clustering-parameters">Clustering parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_features_plot</code></td>
+<td>Genes to be displayed on Feature plot</td>
+<td><code>string</code></td>
+<td>LYZ;CCL5;IL32;PTPRCAP;FCGR3A;PF4;PTPRC</td>
+</tr>
+<tr>
+<td><code>input_integration_dimension</code></td>
+<td>Embeddings for Louvain clustering</td>
+<td><code>string</code></td>
+<td>auto</td>
+</tr>
+<tr>
+<td><code>input_group_plot</code></td>
+<td>Meta-data columns for UMAP plot</td>
+<td><code>string</code></td>
+<td>source_name;Sort</td>
+</tr>
+<tr>
+<td><code>thr_resolution</code></td>
+<td>Resolution threshold</td>
+<td><code>number</code></td>
+<td>0.25</td>
+</tr>
+<tr>
+<td><code>thr_proportion</code></td>
+<td>Cell proportion for ROGUE calculation</td>
+<td><code>number</code></td>
+<td>0.25</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stratification-parameters">Stratification parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_stratification_method</code></td>
+<td>Method to define stratification labels</td>
+<td><code>string</code></td>
+<td>infercnv_label</td>
+</tr>
+<tr>
+<td><code>thr_cluster_size</code></td>
+<td>Defining cluster size limit</td>
+<td><code>integer</code></td>
+<td>1000</td>
+</tr>
+<tr>
+<td><code>thr_consensus_score</code></td>
+<td>Consensus score threshold (Beta)</td>
+<td><code>integer</code></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cell-annotations-parameters">Cell annotations parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_cell_markers_db</code></td>
+<td>Path to cell annotation CSV file</td>
+<td><code>string</code></td>
+<td>./assets/cell_markers_database.csv</td>
+</tr>
+<tr>
+<td><code>input_annotation_level</code></td>
+<td>Define annotation level. Currently, only Major cells are available.</td>
+<td><code>string</code></td>
+<td>Major cells</td>
+</tr>
+</tbody>
+</table>
+<h2 id="batch-correction-parameters">Batch correction parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_integration_method</code></td>
+<td>Batch correction / Integration methods. Default (all).</td>
+<td><code>string</code></td>
+<td>all</td>
+</tr>
+<tr>
+<td><code>input_target_variables</code></td>
+<td>Meta-data target variable for batch correction</td>
+<td><code>string</code></td>
+<td>batch</td>
+</tr>
+</tbody>
+</table>
+<h2 id="batch-evaluation-parameters">Batch Evaluation parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_integration_evaluate</code></td>
+<td>Define methods to be evaluated</td>
+<td><code>string</code></td>
+<td>all</td>
+</tr>
+<tr>
+<td><code>thr_cell_proportion</code></td>
+<td>Cell proportion for Batch evaluation</td>
+<td><code>number</code></td>
+<td>0.3</td>
+</tr>
+<tr>
+<td><code>input_lisi_variables</code></td>
+<td>Define LISI types for Density plot</td>
+<td><code>string</code></td>
+<td>cLISI;iLISI</td>
+</tr>
+</tbody>
+</table>
+<h2 id="differential-expression-parameters">Differential Expression parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_deg_method</code></td>
+<td>Define DEG method (check options at Seurat documentation)</td>
+<td><code>string</code></td>
+<td>wilcox</td>
+</tr>
+<tr>
+<td><code>input_top_deg</code></td>
+<td>Number of DEG to be displayed</td>
+<td><code>integer</code></td>
+<td>20</td>
+</tr>
+<tr>
+<td><code>thr_fold_change</code></td>
+<td>Fold-change threshold</td>
+<td><code>number</code></td>
+<td>0.25</td>
+</tr>
+<tr>
+<td><code>thr_min_percentage</code></td>
+<td>Minimum cell percentage per DEG</td>
+<td><code>number</code></td>
+<td>0.1</td>
+</tr>
+<tr>
+<td><code>opt_hgv_filter</code></td>
+<td>Filtering only HGV genes (Optional)</td>
+<td><code>boolean</code></td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<h2 id="meta-program-parameters">Meta-program parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_meta_programs_db</code></td>
+<td>Path to meta-program CSV file</td>
+<td><code>string</code></td>
+<td>./assets/meta_programs_database.csv</td>
+</tr>
+<tr>
+<td><code>input_cell_category</code></td>
+<td>Meta-program cell category</td>
+<td><code>string</code></td>
+<td>Malignant</td>
+</tr>
+<tr>
+<td><code>input_heatmap_annotation</code></td>
+<td>Meta-data columns to be displayed on heatmap</td>
+<td><code>string</code></td>
+<td>source_name;seurat_clusters</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
