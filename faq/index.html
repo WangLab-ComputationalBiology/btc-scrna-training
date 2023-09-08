@@ -29,6 +29,14 @@
       <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');}</style>
+
 
 
     
@@ -165,16 +173,80 @@
   
   
   
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Getting started
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -502,6 +574,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#can-i-use-my-own-reference-genome-on-the-pipeline" class="md-nav__link">
+    Can I use my own reference genome on the pipeline?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -626,6 +705,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#can-i-use-my-own-reference-genome-on-the-pipeline" class="md-nav__link">
+    Can I use my own reference genome on the pipeline?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -641,8 +727,19 @@
                   
 
 
-<h1 id="faqs">FAQs</h1>
-<h2 id="how-can-i-add-my-gene-markers-in-the-scrna-pipeline">How can I add my gene markers in the scRNA pipeline?</h2>
+<h1 id="faqs">FAQs<a class="headerlink" href="#faqs" title="Permanent link">#</a></h1>
+<h2 id="how-can-i-add-my-gene-markers-in-the-scrna-pipeline">How can I add my gene markers in the scRNA pipeline?<a class="headerlink" href="#how-can-i-add-my-gene-markers-in-the-scrna-pipeline" title="Permanent link">#</a></h2>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Yes. A user can easily add markers into <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv">cell annotation</a> database. Additionally, the user can contribute to cell annotation database by adding markers into the <a href="https://breakthroughcancer.sharepoint.com/:x:/r/sites/TeamLab-BreakThroughCancerInformation/Shared%20Documents/scRNA-seq/3.0%20Pipelines/scRNAseq%20pipeline%20required%20tools.xlsx?d=wa91ee12a14cb4fc49c0b8d2936c75300&amp;csf=1&amp;web=1&amp;e=5cuDZa&amp;nav=MTVfezZBMzNGQkYzLTYxQjQtNEQ5RS05Rjg1LUYwMUUzQkYxNTE1OX0">collections</a> sheet.</p>
+</details>
+<h2 id="can-i-use-my-own-reference-genome-on-the-pipeline">Can I use my own reference genome on the pipeline?<a class="headerlink" href="#can-i-use-my-own-reference-genome-on-the-pipeline" title="Permanent link">#</a></h2>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Although not recommented for standards reasons. It is possible to add a custom genome at the Alignament step. Please, check the <a href="../advanced/">Advanced</a> configurations for more explanation.</p>
+</details>
+<hr />
+<p>Got more questions? Please, send an email to <strong>affaustino@mdanderson.org</strong>. We're here to help!</p>
 
 
 

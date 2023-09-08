@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="quality-control/">
+        <link rel="next" href="advanced/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,13 +20,21 @@
     
     
       
-        <title>BTC scRNA-Seq Material</title>
+        <title>Installation - BTC scRNA-Seq Material</title>
       
     
     
       <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');}</style>
+
 
 
     
@@ -112,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting started
+              Installation
             
           </span>
         </div>
@@ -165,6 +173,42 @@
     
   
   
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -177,7 +221,7 @@
           
   
   <span class="md-ellipsis">
-    Getting started
+    Installation
   </span>
   
 
@@ -188,7 +232,7 @@
         
   
   <span class="md-ellipsis">
-    Getting started
+    Installation
   </span>
   
 
@@ -225,8 +269,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-docker-and-singularity" class="md-nav__link">
-    2. Docker and Singularity
+  <a href="#2-containerization" class="md-nav__link">
+    2. Containerization
   </a>
   
 </li>
@@ -254,22 +298,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-preparing-parameters-for-pipeline-execution" class="md-nav__link">
-    4.2. Preparing parameters for pipeline execution
+  <a href="#42-minimal-command-line" class="md-nav__link">
+    4.2. Minimal command-line
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-an-example-of-a-slurm-profile" class="md-nav__link">
-    4.3. An example of a SLURM profile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-shorten-command-line" class="md-nav__link">
-    4.4. Shorten command-line
+  <a href="#43-shorten-command-line" class="md-nav__link">
+    4.3. Shorten command-line
   </a>
   
 </li>
@@ -279,21 +316,49 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#5-expect-outputs" class="md-nav__link">
+    5. Expect outputs
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#expect-outputs" class="md-nav__link">
-    Expect outputs
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -708,8 +773,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-docker-and-singularity" class="md-nav__link">
-    2. Docker and Singularity
+  <a href="#2-containerization" class="md-nav__link">
+    2. Containerization
   </a>
   
 </li>
@@ -737,22 +802,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-preparing-parameters-for-pipeline-execution" class="md-nav__link">
-    4.2. Preparing parameters for pipeline execution
+  <a href="#42-minimal-command-line" class="md-nav__link">
+    4.2. Minimal command-line
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-an-example-of-a-slurm-profile" class="md-nav__link">
-    4.3. An example of a SLURM profile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-shorten-command-line" class="md-nav__link">
-    4.4. Shorten command-line
+  <a href="#43-shorten-command-line" class="md-nav__link">
+    4.3. Shorten command-line
   </a>
   
 </li>
@@ -762,15 +820,15 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#5-expect-outputs" class="md-nav__link">
+    5. Expect outputs
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#expect-outputs" class="md-nav__link">
-    Expect outputs
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -789,21 +847,21 @@
                   
 
 
-<h1 id="getting-started">Getting started</h1>
-<h2 id="installation">Installation</h2>
-<h3 id="1-nextflow-and-third-party-software">1. Nextflow and third-party software</h3>
+<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<h3 id="1-nextflow-and-third-party-software">1. Nextflow and third-party software<a class="headerlink" href="#1-nextflow-and-third-party-software" title="Permanent link">#</a></h3>
 <p>Nextflow can be used on any POSIX-compatible system (Linux, OS X, WSL). It requires Bash 3.2 (or later) and Java 11 (or later, up to 18) to be installed.</p>
-<pre class="copy"><code class="language-bash">wget -qO- https://get.nextflow.io | bash
-</code></pre>
-<h3 id="2-docker-and-singularity">2. Docker and Singularity</h3>
-<p>This tutorial was tested using Docker v20.10.22 and Singularity v3.7.0. Please make sure to have both software available. The btc-sc-mvp pipeline will require docker images for running.</p>
-<h3 id="3-cloning-scrna-seq-pipeline">3. Cloning scRNA-Seq Pipeline</h3>
-<pre class="copy"><code class="language-bash">git clone https://github.com/WangLab-ComputationalBiology/btc-scrna-pipeline
-</code></pre>
-<h3 id="4-running-single-cell-pipeline">4. Running single-cell pipeline</h3>
-<h4 id="41-preparing-inputs">4.1. Preparing inputs</h4>
-<p>The pipeline requires two inputs, a sample table and meta-data. Both files should follow a mandatory format as described below.</p>
-<p>Sample table should be a csv with four columns, sample, fastq_{1,2}. The column sample will be associated with all reports across the pipeline. Also, it will be required to combine the meta-data on the Seurat object. Prefix and fastq columns are mandatory for Cellranger.</p>
+<div class="copy highlight"><pre><span></span><code>wget<span class="w"> </span>-qO-<span class="w"> </span>https://get.nextflow.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
+<h3 id="2-containerization">2. Containerization<a class="headerlink" href="#2-containerization" title="Permanent link">#</a></h3>
+<p>In line with contemporary pipelines, the BTC scRNA pipeline is powered by multiple Docker container. On that note, distinct computational environments will depend on distinct container technologies, such as Docker (v20.10.22) and Singularity (v3.7.0). For instance, HPC strongly depend on Singularity, therefore it should be explicited defined into <code>profile</code> configurations. For a better understanding, refer to the <a href="advanced/">advanced</a> section. Additionally, check the <a href="https://github.com/break-through-cancer/btc-sc-containers">containers</a> repository.</p>
+<h3 id="3-cloning-scrna-seq-pipeline">3. Cloning scRNA-Seq Pipeline<a class="headerlink" href="#3-cloning-scrna-seq-pipeline" title="Permanent link">#</a></h3>
+<div class="copy highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/WangLab-ComputationalBiology/btc-scrna-pipeline
+</code></pre></div>
+<h3 id="4-running-single-cell-pipeline">4. Running single-cell pipeline<a class="headerlink" href="#4-running-single-cell-pipeline" title="Permanent link">#</a></h3>
+<p>The pipeline requires four parameters: <code>project name</code>, <code>sample_table</code>, <code>meta_data</code>, <code>cancer_type</code> . In particular, sample_table and meta_data should follow a <strong>mandatory</strong> format as described below.</p>
+<h4 id="41-preparing-inputs">4.1. Preparing inputs<a class="headerlink" href="#41-preparing-inputs" title="Permanent link">#</a></h4>
+<p>The sample table must be a CSV file containing four columns: sample, fastq_1, and fastq_2. The sample column will be linked to all reports generated by the pipeline. Additionally, it's essential for merging the metadata with the Seurat object. <strong>Example</strong> <a download="ovarian_sample_table.csv" href="./assets/ovarian_sample_table.csv">sample sheet</a>.</p>
 <table>
 <thead>
 <tr>
@@ -815,307 +873,72 @@
 <tbody>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_BOWEL_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_BOWEL_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_BOWEL_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_BOWEL_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_INFRACOLIC_OMENTUM_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_INFRACOLIC_OMENTUM_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_INFRACOLIC_OMENTUM_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_INFRACOLIC_OMENTUM_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45N_BOWEL/SPECTRUM-OV-009_S1_CD45N_BOWEL_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45N_BOWEL_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45N_BOWEL/SPECTRUM-OV-009_S1_CD45N_BOWEL_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45N_BOWEL_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_LEFT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_UPPER_QUADRANT_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_UPPER_QUADRANT_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_LEFT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_UPPER_QUADRANT_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_UPPER_QUADRANT_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_PELVIC_PERITONEUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_PELVIC_PERITONEUM_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_PELVIC_PERITONEUM_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_PELVIC_PERITONEUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_PELVIC_PERITONEUM_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_PELVIC_PERITONEUM_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_OVARY_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_OVARY_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_OVARY_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_OVARY_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_RIGHT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_UPPER_QUADRANT_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_UPPER_QUADRANT_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45N_RIGHT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_UPPER_QUADRANT_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45N_RIGHT_UPPER_QUADRANT_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45N_LEFT_OVARY_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_ASCITES_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_ASCITES_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_ASCITES_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_ASCITES_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_ASCITES/SPECTRUM-OV-009_S1_CD45P_ASCITES_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_ASCITES_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_ASCITES/SPECTRUM-OV-009_S1_CD45P_ASCITES_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_ASCITES_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_BOWEL_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_BOWEL_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_BOWEL_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_BOWEL_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_INFRACOLIC_OMENTUM_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_INFRACOLIC_OMENTUM_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_INFRACOLIC_OMENTUM_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_INFRACOLIC_OMENTUM_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_LEFT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_OVARY_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_OVARY_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_LEFT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_OVARY_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_OVARY_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_BOWEL/SPECTRUM-OV-009_S1_CD45P_BOWEL_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_BOWEL_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_BOWEL/SPECTRUM-OV-009_S1_CD45P_BOWEL_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_BOWEL_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_PELVIC_PERITONEUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_PELVIC_PERITONEUM_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_PELVIC_PERITONEUM_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_PELVIC_PERITONEUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_PELVIC_PERITONEUM_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_PELVIC_PERITONEUM_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_OVARY_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_OVARY_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_OVARY_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_OVARY_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_LEFT_UPPER_QUADRANT_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_ASCITES_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_ASCITES_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_ASCITES_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_ASCITES_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_BOWEL_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_BOWEL_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_BOWEL_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_BOWEL_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_LEFT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_LEFT_ADNEXA_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_LEFT_ADNEXA_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_LEFT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_LEFT_ADNEXA_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_LEFT_ADNEXA_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_0_1_unknow_flowcell/SPECTRUM-OV-009_S1_CD45P_RIGHT_UPPER_QUADRANT_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_ASCITES_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_ASCITES_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_ASCITES_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_ASCITES_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_0_1_unknow_flowcell/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_0_1_unknow_flowcell/SPECTRUM-OV-022_S1_CD45N_RIGHT_ADNEXA_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_BOWEL_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_BOWEL_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_BOWEL</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_BOWEL_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_BOWEL_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_LEFT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_LEFT_ADNEXA_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_LEFT_ADNEXA_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_LEFT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_LEFT_ADNEXA_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_LEFT_ADNEXA_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-022_S1_CD45P_BOWEL/SPECTRUM-OV-022_S1_CD45P_BOWEL_0_1_unknow_flowcell/SPECTRUM-OV-022_S1_CD45P_BOWEL_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-022_S1_CD45P_BOWEL/SPECTRUM-OV-022_S1_CD45P_BOWEL_0_1_unknow_flowcell/SPECTRUM-OV-022_S1_CD45P_BOWEL_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_ASCITES_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_ASCITES_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_ASCITES_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_ASCITES_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_0_1_unknow_flowcell/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_0_1_unknow_flowcell/SPECTRUM-OV-022_S1_CD45P_RIGHT_ADNEXA_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_RIGHT_FALLOPIAN_TUBE</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_FALLOPIAN_TUBE_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_FALLOPIAN_TUBE_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_RIGHT_FALLOPIAN_TUBE</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_FALLOPIAN_TUBE_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_FALLOPIAN_TUBE_S1_L002_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_OVARY_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_OVARY_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45N_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_OVARY_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45N_RIGHT_OVARY_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45N_INFRACOLIC_OMENTUM_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-065_S1_CD45P_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_ASCITES_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_ASCITES_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45P_ASCITES</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_ASCITES_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_ASCITES_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45P_ASCITES/SPECTRUM-OV-065_S1_CD45P_ASCITES_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45P_ASCITES_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45P_ASCITES/SPECTRUM-OV-065_S1_CD45P_ASCITES_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45P_ASCITES_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45P_INFRACOLIC_OMENTUM_S1_L001_R2_001.fastq.gz</td>
 </tr>
 <tr>
 <td style="text-align: left;">SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_S1_L001_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_S1_L001_R2_001.fastq.gz</td>
-</tr>
-<tr>
-<td style="text-align: left;">SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_S1_L002_R1_001.fastq.gz</td>
-<td style="text-align: left;">/rsrch6/home/genomic_med/lwang22_lab/affaustino/ovarian/fastq/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_S1_L002_R2_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_S1_L001_R1_001.fastq.gz</td>
+<td style="text-align: left;">path/to/fastq/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_0_1_unknow_flowcell/SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY_S1_L001_R2_001.fastq.gz</td>
 </tr>
 </tbody>
 </table>
-<p>Meta-data (.csv) should contain variables related to experimental design (e.g., batch and cell sorting status). Additionally it could have more biological information about that sample. The batch variable will be used to correct the effect. In this pipeline version, we are executing a correction based on a single variable. Finally, the sort column will be used in future editions as an additional step for the QC process.</p>
+<p>The metadata file, in .csv format, should encompass variables pertinent to the experimental design, such as batch and cell sorting status. It can also include additional biological information about the sample. The batch variable is utilized to correct effects. In this version of the pipeline, correction is based on a singular variable. <strong>Example</strong> <a download="ovarian_meta_data.csv" href="./assets/ovarian_meta_data.csv">meta-data</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1339,57 +1162,27 @@
 </tr>
 </tbody>
 </table>
-<h4 id="42-preparing-parameters-for-pipeline-execution">4.2. Preparing parameters for pipeline execution</h4>
-<p>To run the pipeline, we must input three parameters: project_name, sample_csv, and meta_data. In addition, for those using the HPC environment, we need to set up a profile. Briefly, profiles are specific settings related to the job scheduler on the HPC. For instance, each HPC can rely on different engines to schedule jobs, such as SLURM, TORQUE, and LSF. Additionally, profiles can be used to store parameters, i.e., for testing purposes.</p>
-<p>nextflow run single_cell_basic.nf --project_name <PROJECT> --sample_csv <path/to/sample_table.csv> --meta_data <path/to/meta_data.csv> -resume -profile <PROFILE>
-Note: There is a semantic difference between the nextflow (-) and the pipeline (--) parameters. For instance, double-dashed parameters are restricted to pipeline logic, e.g., coded to change filters and thresholds on the single-cell analysis. Finally, the pipeline will generate a folder based on --project_name, which will hold our results after the end of the execution. The -resume command will leverage the Nextflow caching system to provide re-entrance.</p>
-<h4 id="43-an-example-of-a-slurm-profile">4.3. An example of a SLURM profile</h4>
-<p>The profiles should be written on the nextflow.config file. For HPCs, loading the singularity/3.7.0 will be mandatory. We can add information about queue size, memory, and cpus.</p>
-<pre class="copy"><code class="language-bash">slurm {
-
-    module = 'singularity/3.7.0'
-
-    singularity {
-        enabled = true
-    }
-
-    process {
-        executor = 'slurm'
-        cpu = 24
-        queue = 'medium'
-        memory = '64 GB'
-    }
-
-    params {
-        cpus = 24
-        memory = 64
-    }
-
-}
-</code></pre>
-<h4 id="44-shorten-command-line">4.4. Shorten command-line</h4>
-<p>A huge command line can be painful. Luckily, we can shorten instructions by using Nextflow -params-file. It will be a JSON file containing all parameters for that specific run. In the case of testing parameters, it could be a good practice to generate multiple files (e.g., PARAMS_TEST_01.json, PARAMS_TEST_02.json).</p>
-<pre class="copy"><code class="language-bash">
-{
- &quot;project_name&quot;: &quot;BTC-DISEASE-00&quot;,
- &quot;sample_csv&quot;: &quot;path/to/sample_table.csv&quot;,
- &quot;meta_data&quot;: &quot;path/to/meta_data.csv&quot;
-}
-</code></pre>
-<p>In addition, we could add custom QC parameters:</p>
-<pre class="copy"><code class="language-bash">
-{
- &quot;project_name&quot;: &quot;BTC-DISEASE-00&quot;,
- &quot;sample_csv&quot;: &quot;path/to/sample_table.csv&quot;,
- &quot;meta_data&quot;: &quot;path/to/meta_data.csv&quot;,
- &quot;thr_mean_reads_per_cells&quot;: 10000
-}
-</code></pre>
-<pre class="copy"><code class="language-bash">nextflow run single_cell_basic.nf -params-file &lt;PARAMS.json&gt; -resume -profile &lt;PROFILE&gt;
-</code></pre>
-<h2 id="expect-outputs">Expect outputs</h2>
-<pre class="copy"><code class="language-bash"># Output tree
-</code></pre>
+<h4 id="42-minimal-command-line">4.2. Minimal command-line<a class="headerlink" href="#42-minimal-command-line" title="Permanent link">#</a></h4>
+<p>To execute the pipeline, users should use the command line structure outlined below. <strong>Please</strong>, note the semantic differences between using one dash (-) for Nextflow commands and two dashes (--) for pipeline commands. Commands with two dashes are just for specific pipeline tasks, like adjusting filtering or thresholds on the single-cell analysis.</p>
+<div class="highlight"><pre><span></span><code>nextflow run single_cell_basic.nf --project_name &lt;PROJECT&gt; --sample_csv &lt;path/to/sample_table.csv&gt; --meta_data &lt;path/to/meta_data.csv&gt; --cancer_type &lt;CANCER TYPE&gt; -resume -profile &lt;PROFILE&gt;
+</code></pre></div>
+<p>At the end, the pipeline will make a folder named after the <code>--project_name</code> command. This folder will have all the results. The <code>-resume</code> command leverage Nextflow caching, i.e., resuming executions to avoid undesirable computational time.</p>
+<h4 id="43-shorten-command-line">4.3. Shorten command-line<a class="headerlink" href="#43-shorten-command-line" title="Permanent link">#</a></h4>
+<p>Long command lines can be tricky. Thankfully, with Nextflow's <code>-params-file</code>, we can make things simpler. This is a JSON file that has all the instructions related to a specific run. If you're trying out different settings, it could a best practices to keep separate files for each test, e.g., PARAMS_TEST_01.json or PARAMS_TEST_02.json.</p>
+<div class="copy highlight"><pre><span></span><code><span class="o">{</span>
+<span class="w"> </span><span class="s2">&quot;project_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;BTC-CANCER-X&quot;</span>,
+<span class="w"> </span><span class="s2">&quot;sample_csv&quot;</span>:<span class="w"> </span><span class="s2">&quot;path/to/sample_table.csv&quot;</span>,
+<span class="w"> </span><span class="s2">&quot;meta_data&quot;</span>:<span class="w"> </span><span class="s2">&quot;path/to/meta_data.csv&quot;</span>,
+<span class="w"> </span><span class="s2">&quot;cancer_type&quot;</span>:<span class="w"> </span><span class="s2">&quot;CANCER TYPE X&quot;</span>
+<span class="w"> </span><span class="s2">&quot;thr_mean_reads_per_cells&quot;</span>:<span class="w"> </span><span class="m">10000</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Note, other paramaters can be added into the <code>-params-file</code>. </p>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>-params-file<span class="w"> </span>&lt;PARAMS.json&gt;<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>&lt;PROFILE&gt;
+</code></pre></div>
+<h3 id="5-expect-outputs">5. Expect outputs<a class="headerlink" href="#5-expect-outputs" title="Permanent link">#</a></h3>
+<div class="copy highlight"><pre><span></span><code><span class="c1"># Output tree</span>
+</code></pre></div>
 
 
 

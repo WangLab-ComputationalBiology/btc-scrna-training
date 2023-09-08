@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/workflow-and-modules/">
+        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/advanced/">
       
       
-        <link rel="prev" href="../meta-programs/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../command-line-interface/">
+        <link rel="next" href="../quality-control/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Workflows and Modules - BTC scRNA-Seq Material</title>
+        <title>Advanced settings - BTC scRNA-Seq Material</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#workflow-and-modules" class="md-skip">
+        <a href="#advanced-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workflows and Modules
+              Advanced settings
             
           </span>
         </div>
@@ -172,19 +172,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
@@ -197,7 +197,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Getting started
@@ -228,9 +228,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../advanced/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Advanced settings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -239,6 +259,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-creating-nextflow-profiles" class="md-nav__link">
+    1. Creating Nextflow profiles
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Creating Nextflow profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-slurm-profile" class="md-nav__link">
+    1.1 SLURM profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-adding-new-gene-markers" class="md-nav__link">
+    2. Adding new gene markers
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -418,19 +485,19 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -443,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -454,18 +521,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../workflow-and-modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +532,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -648,6 +705,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-creating-nextflow-profiles" class="md-nav__link">
+    1. Creating Nextflow profiles
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Creating Nextflow profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-slurm-profile" class="md-nav__link">
+    1.1 SLURM profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-adding-new-gene-markers" class="md-nav__link">
+    2. Adding new gene markers
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -661,7 +753,40 @@
                   
 
 
-<h1 id="workflow-and-modules">Workflow and Modules<a class="headerlink" href="#workflow-and-modules" title="Permanent link">#</a></h1>
+<h1 id="advanced-configuration">Advanced configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">#</a></h1>
+<h2 id="1-creating-nextflow-profiles">1. Creating Nextflow profiles<a class="headerlink" href="#1-creating-nextflow-profiles" title="Permanent link">#</a></h2>
+<p>For users running the pipeline in an HPC environment, it is necessary to set up a profile. Essentially, Nextflow <a href="https://www.nextflow.io/docs/latest/config.html#config-profiles">profiles</a> define specific settings related to the job scheduler of the HPC. Various HPCs may employ different engines for job scheduling, such as SLURM, TORQUE, and LSF. </p>
+<h3 id="11-slurm-profile">1.1 SLURM profile<a class="headerlink" href="#11-slurm-profile" title="Permanent link">#</a></h3>
+<p>The profiles should be written on the <code>nextflow.config</code> file. For HPCs, it is essential to load the <code>singularity</code> module. This instruction will replace the <code>module load</code> command.</p>
+<div class="copy highlight"><pre><span></span><code>institution<span class="w"> </span><span class="o">{</span>
+
+<span class="w">    </span><span class="nv">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;singularity/3.7.0&#39;</span>
+
+<span class="w">    </span>singularity<span class="w"> </span><span class="o">{</span>
+
+<span class="w">        </span><span class="nv">enabled</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span>
+
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>process<span class="w"> </span><span class="o">{</span>
+
+<span class="w">        </span><span class="nv">executor</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;slurm&#39;</span>
+<span class="w">        </span><span class="nv">queue</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;medium&#39;</span>
+
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>params<span class="w"> </span><span class="o">{</span>
+
+<span class="w">        </span><span class="nv">max_memory</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">128</span>.GB
+<span class="w">        </span><span class="nv">max_cpus</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">32</span>
+<span class="w">        </span><span class="nv">max_time</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">24</span>.h
+
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>The previous snippet creates a profile for a institution powered by SLURM. It includes several settings, such as loading modules like <code>singularity/3.7.0</code>, and specifying the job scheduling engine with the <code>executor</code> property. Nextflow works with many engines; for more details, refer to the official <a href="https://nf-co.re/docs/usage/tutorials/step_by_step_institutional_profile">documentation</a>. Please note that the <code>process</code>  scope should match the HPC specs, i.e., queue, memory and cpus.</p>
+<hr />
+<h2 id="2-adding-new-gene-markers">2. Adding new gene markers<a class="headerlink" href="#2-adding-new-gene-markers" title="Permanent link">#</a></h2>
 
 
 
