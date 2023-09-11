@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/quality-control/">
+        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/dimensionality-clustering/">
       
       
-        <link rel="prev" href="../advanced/">
+        <link rel="prev" href="../quality-control/">
       
       
-        <link rel="next" href="../dimensionality-clustering/">
+        <link rel="next" href="../batch-correction/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Sample and QC filtering - BTC scRNA-Seq Material</title>
+        <title>Dimensionality reduction and clustering - BTC scRNA-Seq Material</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sample-and-qc-filtering" class="md-skip">
+        <a href="#dimensionality-reduction-and-clustering" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sample and QC filtering
+              Dimensionality reduction and clustering
             
           </span>
         </div>
@@ -291,6 +291,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../quality-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample and QC filtering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -306,7 +326,7 @@
           
   
   <span class="md-ellipsis">
-    Sample and QC filtering
+    Dimensionality reduction and clustering
   </span>
   
 
@@ -317,7 +337,7 @@
         
   
   <span class="md-ellipsis">
-    Sample and QC filtering
+    Dimensionality reduction and clustering
   </span>
   
 
@@ -343,72 +363,12 @@
     Motivation
   </a>
   
-    <nav class="md-nav" aria-label="Motivation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#qc-metrics-and-filtering-methods" class="md-nav__link">
-    QC Metrics and Filtering Methods
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
-  </a>
-  
-    <nav class="md-nav" aria-label="Hands-on">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-running-pipeline-using-default-parameters" class="md-nav__link">
-    1. Running pipeline using default parameters
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-inspecting-html-report" class="md-nav__link">
-    2. Inspecting HTML report
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dimensionality-clustering/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dimensionality reduction and clustering
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -756,46 +716,6 @@
     Motivation
   </a>
   
-    <nav class="md-nav" aria-label="Motivation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#qc-metrics-and-filtering-methods" class="md-nav__link">
-    QC Metrics and Filtering Methods
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
-  </a>
-  
-    <nav class="md-nav" aria-label="Hands-on">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-running-pipeline-using-default-parameters" class="md-nav__link">
-    1. Running pipeline using default parameters
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-inspecting-html-report" class="md-nav__link">
-    2. Inspecting HTML report
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -813,40 +733,11 @@
                   
 
 
-<h1 id="sample-and-qc-filtering">Sample and QC filtering<a class="headerlink" href="#sample-and-qc-filtering" title="Permanent link">#</a></h1>
+<h1 id="dimensionality-reduction-and-clustering">Dimensionality reduction and clustering<a class="headerlink" href="#dimensionality-reduction-and-clustering" title="Permanent link">#</a></h1>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
-<p>Quality control (QC) is an essential step on single cell RNA-seq projects. Low-quality cells, contaminants, and doublets can greatly impact data interpretability, i.e., concealing genuine biological signals. Additionally, QC in single-cell data is a challenging process that can only be evaluated through downstream analyses, making it an iterative procedure and case-specific. The major goals of performing QC and filtering include:</p>
-<h3 id="qc-metrics-and-filtering-methods">QC Metrics and Filtering Methods<a class="headerlink" href="#qc-metrics-and-filtering-methods" title="Permanent link">#</a></h3>
-<ul>
-<li><strong>Filtering by UMI Counts:</strong> This helps eliminate barcodes not representing single cells, with thresholds varying in literature.</li>
-<li><strong>Filtering by Number of Features:</strong> Similar to UMI counts, this removes likely multiplets, but thresholds can vary.</li>
-<li><strong>Filtering by Percent of Mitochondrial (mt) Reads:</strong> Elevated mt RNA suggests unhealthy cells; thresholds vary. Be cautious with meaningful mt gene expression.</li>
-<li><strong>Doublet Detection:</strong> Detects multiplets using tools like DoubletFinder. Setting thresholds is subjective and data-dependent.</li>
-<li><strong>Identifying Empty Droplets:</strong> Distinguishes cell-containing droplets from empty ones, with methods like emptyDrops and other tools available.</li>
-<li><strong>Removing Ambient RNAs:</strong> Addresses contamination from ambient RNAs using statistical approaches.</li>
-</ul>
-<h2 id="hands-on">Hands-on<a class="headerlink" href="#hands-on" title="Permanent link">#</a></h2>
-<p>The current pipeline version covers most common QC metrics, including the parameters described below. In this tutorial, we will cover the very basic steps regarding Cellranger alignment and sample filtering.</p>
-<h3 id="1-running-pipeline-using-default-parameters">1. Running pipeline using default parameters<a class="headerlink" href="#1-running-pipeline-using-default-parameters" title="Permanent link">#</a></h3>
-<p>To improve reproducibility we suggest several thresholds based on multiple reports on literature (see below). In addition, for this training we will leverage a dataset derived MSK Spectrum <a href="https://www.nature.com/articles/s41586-022-05496-1">[1]</a>. The dataset can be download through the BTC Buckets <a href="">[2]</a>.</p>
-<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
-</code></pre></div>
-<p>By default the previous command line considers thresholds.</p>
-<div class="admonition thresholds">
-<p class="admonition-title">Thresholds</p>
-<ul>
-<li><code>thr_estimate_n_cells</code> = 300</li>
-<li><code>thr_mean_reads_per_cells</code> = 25000</li>
-<li><code>thr_median_genes_per_cell</code> = 900</li>
-<li><code>thr_median_umi_per_cell</code> = 1000</li>
-<li><code>thr_nFeature_RNA_min</code> = 300</li>
-<li><code>thr_nFeature_RNA_max</code> = 7500</li>
-<li><code>thr_percent_mito</code> = 25</li>
-<li><code>thr_n_observed_cells</code> = 300</li>
-</ul>
-</div>
-<h3 id="2-inspecting-html-report">2. Inspecting HTML report<a class="headerlink" href="#2-inspecting-html-report" title="Permanent link">#</a></h3>
-<p>A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis.</p>
+<p>Dimensionality reduction in single-cell studies compresses high-dimensional transcriptional data into a simpler form using methods like t-SNE, UMAP, or PCA. After dimensionality reduction simplifies high-dimensional data into a more manageable form, clustering becomes more effective and accurate.</p>
+<p>Resolution determines the granularity of clustering. A higher resolution will result in more, smaller clusters, potentially capturing subtle differences between cell states. Conversely, a lower resolution might group distinct cell types or states into broader categories. Adjusting the resolution allows researchers to explore the data at various levels of detail, from broad cell types to finer subtypes or transitional states.</p>
+<p>The optimal number of clusters is a crucial parameter to ensure meaningful categorization. Too few clusters might overlook important cellular heterogeneity, while too many can lead to over-segmentation, where genuinely similar cells are divided into unnecessary subgroups. Various methods, like the elbow method or silhouette analysis, can be employed to determine the optimal number, ensuring that the chosen clusters best represent the underlying data structure.</p>
 
 
 

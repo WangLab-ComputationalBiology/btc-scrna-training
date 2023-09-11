@@ -380,6 +380,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../dimensionality-clustering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dimensionality reduction and clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../batch-correction/" class="md-nav__link">
         
   
@@ -754,9 +774,9 @@
 
 
 <h1 id="advanced-configuration">Advanced configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">#</a></h1>
-<h2 id="1-creating-nextflow-profiles">1. Creating Nextflow profiles<a class="headerlink" href="#1-creating-nextflow-profiles" title="Permanent link">#</a></h2>
+<h3 id="1-creating-nextflow-profiles">1. Creating Nextflow profiles<a class="headerlink" href="#1-creating-nextflow-profiles" title="Permanent link">#</a></h3>
 <p>For users running the pipeline in an HPC environment, it is necessary to set up a profile. Essentially, Nextflow <a href="https://www.nextflow.io/docs/latest/config.html#config-profiles">profiles</a> define specific settings related to the job scheduler of the HPC. Various HPCs may employ different engines for job scheduling, such as SLURM, TORQUE, and LSF. </p>
-<h3 id="11-slurm-profile">1.1 SLURM profile<a class="headerlink" href="#11-slurm-profile" title="Permanent link">#</a></h3>
+<h4 id="11-slurm-profile">1.1 SLURM profile<a class="headerlink" href="#11-slurm-profile" title="Permanent link">#</a></h4>
 <p>The profiles should be written on the <code>nextflow.config</code> file. For HPCs, it is essential to load the <code>singularity</code> module. This instruction will replace the <code>module load</code> command.</p>
 <div class="copy highlight"><pre><span></span><code>institution<span class="w"> </span><span class="o">{</span>
 
