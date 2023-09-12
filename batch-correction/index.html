@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/batch-correction/">
       
       
-        <link rel="prev" href="../dimensionality-clustering/">
+        <link rel="prev" href="../stratification-and-cnv/">
       
       
         <link rel="next" href="../cell-annotation/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Batch correction and evaluation - BTC scRNA-Seq Material</title>
+        <title>4. Batch correction and evaluation - BTC scRNA-Seq Material</title>
       
     
     
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Batch correction and evaluation
+              4. Batch correction and evaluation
             
           </span>
         </div>
@@ -297,7 +297,7 @@
         
   
   <span class="md-ellipsis">
-    Sample and QC filtering
+    1. Sample and QC filtering
   </span>
   
 
@@ -317,7 +317,27 @@
         
   
   <span class="md-ellipsis">
-    Dimensionality reduction and clustering
+    2. Dimensionality reduction and clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stratification-and-cnv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Cell stratification and CNV Analysis
   </span>
   
 
@@ -346,7 +366,7 @@
           
   
   <span class="md-ellipsis">
-    Batch correction and evaluation
+    4. Batch correction and evaluation
   </span>
   
 
@@ -357,7 +377,7 @@
         
   
   <span class="md-ellipsis">
-    Batch correction and evaluation
+    4. Batch correction and evaluation
   </span>
   
 
@@ -386,8 +406,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    Parameters
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -411,7 +478,7 @@
         
   
   <span class="md-ellipsis">
-    Cell annotation
+    5. Cell annotation
   </span>
   
 
@@ -431,7 +498,7 @@
         
   
   <span class="md-ellipsis">
-    Cell-cell communication
+    6. Cell-cell communication
   </span>
   
 
@@ -451,7 +518,7 @@
         
   
   <span class="md-ellipsis">
-    Cell trajectory
+    7. Cell trajectory
   </span>
   
 
@@ -471,7 +538,7 @@
         
   
   <span class="md-ellipsis">
-    Malignant meta-programs
+    8. Malignant meta-programs
   </span>
   
 
@@ -726,8 +793,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    Parameters
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -749,8 +863,34 @@
 
 <h1 id="batch-correction-and-evaluation">Batch correction and evaluation<a class="headerlink" href="#batch-correction-and-evaluation" title="Permanent link">#</a></h1>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
-<p>Batch correction in single-cell transcriptomics addresses unwanted technical variations in single-cell RNA sequencing (scRNA-seq) data. These variations, or batch effects, can arise from different experimental conditions or sequencing platforms. If uncorrected, it can hide true biological signals. Several algorithms, like Seurat's integration method, Harmony, and BBKNN, have been developed to mitigate these effects.</p>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h2>
+<p>Batch correction in single-cell transcriptomics mitigates unwanted technical variations inherent in single-cell RNA sequencing (scRNA-seq) data. These technical or batch effects can stem from varying experimental conditions or sequencing platforms. If left unaddressed, they can obscure genuine biological signals. To tackle this, we have incorporated several batch correction methods, including CCA, FastMNN, RPCA, and Harmony. Additionally, the pipeline can compute various quality metrics to determine which method excels for a specific dataset.</p>
+<h2 id="step-by-step">Step-by-step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
+<p>The batch module consists of two steps: batch effect correction and assessment using quality metrics. The criteria for these quality metrics were established based on the XXXX and XXXX publications. Additionally, we leverage kBET, a renowned method for assessing batch correction in single-cell projects.</p>
+<h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
+<p>By default the previous command line considers thresholds.</p>
+<div class="admonition info">
+<p class="admonition-title">HPC</p>
+<ul>
+<li><code>input_integration_evaluate</code>     = all</li>
+<li><code>thr_cell_proportion</code>            = 0.30</li>
+<li><code>input_lisi_variables</code>           = cLISI;iLISI</li>
+</ul>
+</div>
+<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Cirro</p>
+<ul>
+<li><code>Define methods to be evaluated</code>              = all</li>
+<li><code>Cell proportion for Batch evaluation</code>        = 0.30</li>
+<li><code>Define LISI types for Density plot</code>          = cLISI;iLISI</li>
+</ul>
+</div>
+<h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
+<h4 id="21">2.1.<a class="headerlink" href="#21" title="Permanent link">#</a></h4>
+<h4 id="22">2.2.<a class="headerlink" href="#22" title="Permanent link">#</a></h4>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
 
 
 

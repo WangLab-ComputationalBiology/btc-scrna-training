@@ -22,7 +22,7 @@
     
     
       
-        <title>Sample and QC filtering - BTC scRNA-Seq Material</title>
+        <title>1. Sample and QC filtering - BTC scRNA-Seq Material</title>
       
     
     
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sample and QC filtering
+              1. Sample and QC filtering
             
           </span>
         </div>
@@ -306,7 +306,7 @@
           
   
   <span class="md-ellipsis">
-    Sample and QC filtering
+    1. Sample and QC filtering
   </span>
   
 
@@ -317,7 +317,7 @@
         
   
   <span class="md-ellipsis">
-    Sample and QC filtering
+    1. Sample and QC filtering
   </span>
   
 
@@ -359,23 +359,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
   </a>
   
-    <nav class="md-nav" aria-label="Hands-on">
+    <nav class="md-nav" aria-label="Step-by-step">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-running-pipeline-using-default-parameters" class="md-nav__link">
-    1. Running pipeline using default parameters
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-inspecting-html-report" class="md-nav__link">
-    2. Inspecting HTML report
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adjusting-filterings" class="md-nav__link">
+    3. Adjusting filterings
   </a>
   
 </li>
@@ -404,7 +411,27 @@
         
   
   <span class="md-ellipsis">
-    Dimensionality reduction and clustering
+    2. Dimensionality reduction and clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stratification-and-cnv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Cell stratification and CNV Analysis
   </span>
   
 
@@ -424,7 +451,7 @@
         
   
   <span class="md-ellipsis">
-    Batch correction and evaluation
+    4. Batch correction and evaluation
   </span>
   
 
@@ -444,7 +471,7 @@
         
   
   <span class="md-ellipsis">
-    Cell annotation
+    5. Cell annotation
   </span>
   
 
@@ -464,7 +491,7 @@
         
   
   <span class="md-ellipsis">
-    Cell-cell communication
+    6. Cell-cell communication
   </span>
   
 
@@ -484,7 +511,7 @@
         
   
   <span class="md-ellipsis">
-    Cell trajectory
+    7. Cell trajectory
   </span>
   
 
@@ -504,7 +531,7 @@
         
   
   <span class="md-ellipsis">
-    Malignant meta-programs
+    8. Malignant meta-programs
   </span>
   
 
@@ -772,23 +799,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
   </a>
   
-    <nav class="md-nav" aria-label="Hands-on">
+    <nav class="md-nav" aria-label="Step-by-step">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-running-pipeline-using-default-parameters" class="md-nav__link">
-    1. Running pipeline using default parameters
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-inspecting-html-report" class="md-nav__link">
-    2. Inspecting HTML report
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adjusting-filterings" class="md-nav__link">
+    3. Adjusting filterings
   </a>
   
 </li>
@@ -825,28 +859,38 @@
 <li><strong>Identifying Empty Droplets:</strong> Distinguishes cell-containing droplets from empty ones, with methods like emptyDrops and other tools available.</li>
 <li><strong>Removing Ambient RNAs:</strong> Addresses contamination from ambient RNAs using statistical approaches.</li>
 </ul>
-<h2 id="hands-on">Hands-on<a class="headerlink" href="#hands-on" title="Permanent link">#</a></h2>
+<h2 id="step-by-step">Step-by-step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
 <p>The current pipeline version covers most common QC metrics, including the parameters described below. In this tutorial, we will cover the very basic steps regarding Cellranger alignment and sample filtering.</p>
-<h3 id="1-running-pipeline-using-default-parameters">1. Running pipeline using default parameters<a class="headerlink" href="#1-running-pipeline-using-default-parameters" title="Permanent link">#</a></h3>
+<h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
 <p>To improve reproducibility we suggest several thresholds based on multiple reports on literature (see below). In addition, for this training we will leverage a dataset derived MSK Spectrum <a href="https://www.nature.com/articles/s41586-022-05496-1">[1]</a>. The dataset can be download through the BTC Buckets <a href="">[2]</a>.</p>
 <div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
 </code></pre></div>
 <p>By default the previous command line considers thresholds.</p>
-<div class="admonition thresholds">
-<p class="admonition-title">Thresholds</p>
+<div class="admonition info">
+<p class="admonition-title">HPC</p>
 <ul>
-<li><code>thr_estimate_n_cells</code> = 300</li>
-<li><code>thr_mean_reads_per_cells</code> = 25000</li>
-<li><code>thr_median_genes_per_cell</code> = 900</li>
-<li><code>thr_median_umi_per_cell</code> = 1000</li>
-<li><code>thr_nFeature_RNA_min</code> = 300</li>
-<li><code>thr_nFeature_RNA_max</code> = 7500</li>
-<li><code>thr_percent_mito</code> = 25</li>
-<li><code>thr_n_observed_cells</code> = 300</li>
+<li><code>thr_estimate_n_cells</code>        = 300</li>
+<li><code>thr_mean_reads_per_cells</code>    = 25000</li>
+<li><code>thr_median_genes_per_cell</code>   = 900</li>
+<li><code>thr_median_umi_per_cell</code>     = 1000</li>
+<li><code>thr_nFeature_RNA_min</code>        = 300</li>
+<li><code>thr_nFeature_RNA_max</code>        = 7500</li>
+<li><code>thr_percent_mito</code>            = 25</li>
+<li><code>thr_n_observed_cells</code>        = 300</li>
 </ul>
 </div>
-<h3 id="2-inspecting-html-report">2. Inspecting HTML report<a class="headerlink" href="#2-inspecting-html-report" title="Permanent link">#</a></h3>
-<p>A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis.</p>
+<h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
+<p>A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample.</p>
+<p><a class="glightbox" href="https://dummyimage.com/600x400/" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="https://dummyimage.com/600x400/" /></a></p>
+<p>The QC table displays metrics related to multiple samples, along with a QC label indicating the status of each sample (SUCCESS, FIXABLE, or FAILURE). The filtering system was developed with a focus on traceability, allowing users to inspect which metrics do not meet expectations and make necessary adjustments. Additionally, it enables users to determine whether the samples are failing at the library preparation stage or due to cell-level quality issues.</p>
+<h3 id="3-adjusting-filterings">3. Adjusting filterings<a class="headerlink" href="#3-adjusting-filterings" title="Permanent link">#</a></h3>
+<p>Now that we have assessed the quality control reports, we will proceed with the analysis by adjusting the threshold. In this case, we will be more permissive to include the <strong>SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY</strong> sample. To achieve this, we will change the <code>thr_n_observed_cells</code> to 250 cells after filtering mitochondrial RNA percentage. Please note that this adjustment will be applied specifically to this subset, which contains only a fraction of cells per sample.</p>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>--thr_n_observed_cells<span class="w"> </span><span class="m">250</span><span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Nextflow caching system ensures that the alignment step is not rerun. As a result, only the QC filtering will be executed, along with the generation of the new project report.</p>
+</div>
 
 
 

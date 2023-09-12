@@ -14,7 +14,7 @@
         <link rel="prev" href="../quality-control/">
       
       
-        <link rel="next" href="../batch-correction/">
+        <link rel="next" href="../stratification-and-cnv/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Dimensionality reduction and clustering - BTC scRNA-Seq Material</title>
+        <title>2. Dimensionality reduction and clustering - BTC scRNA-Seq Material</title>
       
     
     
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dimensionality reduction and clustering
+              2. Dimensionality reduction and clustering
             
           </span>
         </div>
@@ -297,7 +297,7 @@
         
   
   <span class="md-ellipsis">
-    Sample and QC filtering
+    1. Sample and QC filtering
   </span>
   
 
@@ -326,7 +326,7 @@
           
   
   <span class="md-ellipsis">
-    Dimensionality reduction and clustering
+    2. Dimensionality reduction and clustering
   </span>
   
 
@@ -337,7 +337,7 @@
         
   
   <span class="md-ellipsis">
-    Dimensionality reduction and clustering
+    2. Dimensionality reduction and clustering
   </span>
   
 
@@ -365,6 +365,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    Hands-on
+  </a>
+  
+    <nav class="md-nav" aria-label="Hands-on">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-highly-variable-genes-hgv" class="md-nav__link">
+    2.1. Highly variable genes (HGV)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-umap-and-cluster-composition" class="md-nav__link">
+    2.2. UMAP and cluster composition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-clustering-assessement" class="md-nav__link">
+    2.3. Clustering assessement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -380,11 +441,31 @@
   
   
     <li class="md-nav__item">
+      <a href="../stratification-and-cnv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Cell stratification and CNV Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../batch-correction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Batch correction and evaluation
+    4. Batch correction and evaluation
   </span>
   
 
@@ -404,7 +485,7 @@
         
   
   <span class="md-ellipsis">
-    Cell annotation
+    5. Cell annotation
   </span>
   
 
@@ -424,7 +505,7 @@
         
   
   <span class="md-ellipsis">
-    Cell-cell communication
+    6. Cell-cell communication
   </span>
   
 
@@ -444,7 +525,7 @@
         
   
   <span class="md-ellipsis">
-    Cell trajectory
+    7. Cell trajectory
   </span>
   
 
@@ -464,7 +545,7 @@
         
   
   <span class="md-ellipsis">
-    Malignant meta-programs
+    8. Malignant meta-programs
   </span>
   
 
@@ -718,6 +799,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    Hands-on
+  </a>
+  
+    <nav class="md-nav" aria-label="Hands-on">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-highly-variable-genes-hgv" class="md-nav__link">
+    2.1. Highly variable genes (HGV)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-umap-and-cluster-composition" class="md-nav__link">
+    2.2. UMAP and cluster composition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-clustering-assessement" class="md-nav__link">
+    2.3. Clustering assessement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -735,9 +877,55 @@
 
 <h1 id="dimensionality-reduction-and-clustering">Dimensionality reduction and clustering<a class="headerlink" href="#dimensionality-reduction-and-clustering" title="Permanent link">#</a></h1>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
-<p>Dimensionality reduction in single-cell studies compresses high-dimensional transcriptional data into a simpler form using methods like t-SNE, UMAP, or PCA. After dimensionality reduction simplifies high-dimensional data into a more manageable form, clustering becomes more effective and accurate.</p>
-<p>Resolution determines the granularity of clustering. A higher resolution will result in more, smaller clusters, potentially capturing subtle differences between cell states. Conversely, a lower resolution might group distinct cell types or states into broader categories. Adjusting the resolution allows researchers to explore the data at various levels of detail, from broad cell types to finer subtypes or transitional states.</p>
-<p>The optimal number of clusters is a crucial parameter to ensure meaningful categorization. Too few clusters might overlook important cellular heterogeneity, while too many can lead to over-segmentation, where genuinely similar cells are divided into unnecessary subgroups. Various methods, like the elbow method or silhouette analysis, can be employed to determine the optimal number, ensuring that the chosen clusters best represent the underlying data structure.</p>
+<p>Dimensionality reduction and cell clustering are fundamental steps in single-cell RNA-sequencing (scRNA-seq) analysis. In this tutorial, we emphasize the primary parameters associated with dimensionality reduction and clustering. We will also delve into PCA loadings, metrics for evaluating clustering, and UMAP visualization</p>
+<h2 id="hands-on">Hands-on<a class="headerlink" href="#hands-on" title="Permanent link">#</a></h2>
+<p>In this hands-on section, we will cover several analytical steps. Initially, the pipeline will combine sample matrices into one Seurat object. Subsequently, it will carry out normalization, dimensionality reduction, and clustering. Collectively, these procedures will generate a preliminary clustering used for distinguishing between malignant and non-malignant cells.</p>
+<h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
+<p>Currently, the pipeline permits users to modify several parameters, encompassing crucial thresholds like the number of highly variable genes and clustering resolution. Please, see the list below. </p>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
+<p>By default the previous command line considers thresholds.</p>
+<div class="admonition info">
+<p class="admonition-title">HPC</p>
+<ul>
+<li><code>thr_n_features</code>                = 2000</li>
+<li><code>input_integration_dimension</code>   = auto</li>
+<li><code>input_group_plot</code>              = source_name,Sort</li>
+<li><code>thr_resolution</code>                = 0.25</li>
+<li><code>thr_proportion</code>                = 0.25</li>
+</ul>
+</div>
+<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Cirro</p>
+<ul>
+<li><code>Number features for FindVariableFeatures</code>                = 2000</li>
+<li><code>Embeddings for Louvain clustering</code>                       = auto</li>
+<li><code>Meta-data columns for UMAP plot</code>                         = source_name,Sort</li>
+<li><code>Resolution threshold</code>                                    = 0.25</li>
+<li><code>Cell proportion for ROGUE calculation</code>                   = 0.25</li>
+</ul>
+</div>
+<h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
+<h4 id="21-highly-variable-genes-hgv">2.1. Highly variable genes (HGV)<a class="headerlink" href="#21-highly-variable-genes-hgv" title="Permanent link">#</a></h4>
+<p>In the first report, produces multiple figures, including the HGV distribution on the dataset. Alternatively, the user can doublecheck which genes is contributing (loadings) to each principal component.</p>
+<p><a class="glightbox" href="../figures/pca-highly-variable-features.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/pca-highly-variable-features.png" /></a></p>
+<p>As mentione earlier, loadings represent the genes/features contribution to each principal component or other dimension reduction. Visualizing loadings provides insights in which genes are driving the separation observed in a particular component. In turn, these genes will strongly the clustering process.</p>
+<p><a class="glightbox" href="../figures/pca-loadings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/pca-loadings.png" /></a></p>
+<h4 id="22-umap-and-cluster-composition">2.2. UMAP and cluster composition<a class="headerlink" href="#22-umap-and-cluster-composition" title="Permanent link">#</a></h4>
+<p>The next step on the pipeline will perform clustering over the dimensions (e.g. PCs). Here,  we can access the clustering profile, composition, and quality.</p>
+<p><a class="glightbox" href="../figures/umap-clustering.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-clustering.png" /></a></p>
+<p><a class="glightbox" href="../figures/barplot-cluster-composition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/barplot-cluster-composition.png" /></a></p>
+<p>The barplot illustrates the cluster composition per sample. Clusters dominated by a single sample might indicate populations of malignant cells.</p>
+<h4 id="23-clustering-assessement">2.3. Clustering assessement<a class="headerlink" href="#23-clustering-assessement" title="Permanent link">#</a></h4>
+<p>ROGUE is an entropy-based metric designed to evaluate cluster purity in single-cell RNA sequencing (scRNA-seq) data. In essence, it assists in refining clustering by suggesting when clusters should be split or merged. High ROGUE scores correlate with purity, meaning clusters consist of cells displaying similar transcriptional backgrounds. Conversely, low ROGUE scores indicate cluster heterogeneity, suggesting clusters comprise varied cell populations and should be further subdivided.</p>
+<p><a class="glightbox" href="../figures/boxplot-rogue.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/boxplot-rogue.png" /></a></p>
+<p>The ROGUE score can also provide insights regarding data quality. For example, samples with a low average ROGUE score may contain a higher proportion of doublets.</p>
+<hr />
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
+<ol>
+<li><a href="https://www.nature.com/articles/s41467-020-16904-3">An entropy-based metric for assessing the purity of single cell populations</a></li>
+</ol>
 
 
 

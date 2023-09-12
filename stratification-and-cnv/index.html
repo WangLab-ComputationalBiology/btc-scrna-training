@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/contributing/">
+        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/stratification-and-cnv/">
       
       
-        <link rel="prev" href="../command-line-interface/">
+        <link rel="prev" href="../dimensionality-clustering/">
       
       
-        <link rel="next" href="../faq/">
+        <link rel="next" href="../batch-correction/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Contributing - BTC scRNA-Seq Material</title>
+        <title>3. Cell stratification and CNV Analysis - BTC scRNA-Seq Material</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contributing" class="md-skip">
+        <a href="#cell-stratification-and-cnv" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contributing
+              3. Cell stratification and CNV Analysis
             
           </span>
         </div>
@@ -255,19 +255,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -280,7 +280,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
@@ -331,9 +331,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../stratification-and-cnv/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Cell stratification and CNV Analysis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -342,6 +362,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-infercnv-predictions" class="md-nav__link">
+    2.1. InferCNV predictions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-consensus-approach-under-development" class="md-nav__link">
+    2.2. Consensus approach (under development)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cd45-marker-based-on-facs" class="md-nav__link">
+    2.3. CD45 marker based on FACS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -541,29 +642,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Contributing
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -572,40 +653,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#co-authoring-or-requesting-modules" class="md-nav__link">
-    Co-authoring or requesting modules
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feedback-and-reporting-bugs" class="md-nav__link">
-    Feedback and reporting bugs
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -739,16 +786,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#co-authoring-or-requesting-modules" class="md-nav__link">
-    Co-authoring or requesting modules
+  <a href="#motivation" class="md-nav__link">
+    Motivation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#feedback-and-reporting-bugs" class="md-nav__link">
-    Feedback and reporting bugs
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
   </a>
+  
+    <nav class="md-nav" aria-label="Step-by-step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-infercnv-predictions" class="md-nav__link">
+    2.1. InferCNV predictions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-consensus-approach-under-development" class="md-nav__link">
+    2.2. Consensus approach (under development)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cd45-marker-based-on-facs" class="md-nav__link">
+    2.3. CD45 marker based on FACS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -767,12 +861,50 @@
                   
 
 
-<h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">#</a></h1>
-<h2 id="co-authoring-or-requesting-modules">Co-authoring or requesting modules<a class="headerlink" href="#co-authoring-or-requesting-modules" title="Permanent link">#</a></h2>
-<p>We welcome requests and collaborations. To facilitate this, we have established a shared document to record every collaborative endeavor. Within this Excel sheet, BTC users can submit requests and also contribute gene signatures for potential inclusion in the pipeline.</p>
-<p><a class="glightbox" href="../figures/btc-pipeline-admin.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image title" src="../figures/btc-pipeline-admin.png" /></a></p>
-<h2 id="feedback-and-reporting-bugs">Feedback and reporting bugs<a class="headerlink" href="#feedback-and-reporting-bugs" title="Permanent link">#</a></h2>
-<p>We at scRNA sincerely appreciate your feedback. However, it is important to note that while we have achieved a stable version, several features still require further testing with different datasets. As a result, there may be occasional minor bugs or unexpected behaviors. If you encounter any bugs, we kindly request that you report them via GitHub issues <a href="https://github.com/break-through-cancer/btc-scrna-pipeline">[1]</a>.</p>
+<h1 id="cell-stratification-and-cnv">Cell stratification and CNV<a class="headerlink" href="#cell-stratification-and-cnv" title="Permanent link">#</a></h1>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
+<p>Distinguishing malignant cells from normal cells remains a significant challenge in single-cell transcriptomics. To confidently identify malignant cells among other cell populations, multiple pieces of evidence are necessary. In our pipeline, we have incorporated two common types of evidence: gene signatures and CNV analysis.</p>
+<h2 id="step-by-step">Step-by-step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
+<p>In this module, we employ a conservative strategy, offering users the choice between two distinct methods for identifying malignant populations: i) the inferCNV-based method, and ii) the consensus score. The consensus score is a method currently under development, which amalgamates gene signatures, various CNV predictions, and cluster/patient specificity.</p>
+<h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
+<p>By default the previous command line considers thresholds.</p>
+<div class="admonition info">
+<p class="admonition-title">HPC</p>
+<ul>
+<li><code>input_stratification_method</code>   = infercnv_label</li>
+<li><code>thr_cluster_size</code>              = 1000</li>
+<li><code>thr_consensus_score</code>           = 2</li>
+</ul>
+</div>
+<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Cirro</p>
+<ul>
+<li><code>Method to define stratification labels</code>            = 2000</li>
+<li><code>Defining cluster size limit</code>                       = auto</li>
+<li><code>Consensus score threshold (Beta)</code>                  = source_name,Sort</li>
+</ul>
+</div>
+<h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
+<h4 id="21-infercnv-predictions">2.1. InferCNV predictions<a class="headerlink" href="#21-infercnv-predictions" title="Permanent link">#</a></h4>
+<p>The first UMAP displays malignancy status based on inferCNV predictions. By default, the pipeline will utilize this annotation for downstream analysis. The inferCNV leverages in a hidden Markov model (HMM) to identify copy number variations (CNVs) status based on expression data. It is a time-consuming task, therefore we applied a heuristic to subsampling cells per cluster, <code>thr_cluster_size</code>. In summary, the method performs well, but it has limitations displaying misassigned cells, and low accuracy in small populations.</p>
+<p><a class="glightbox" href="../figures/umap-infercnv.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-infercnv.png" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>InferCNV predictions are carried out in two distinct modes: reference-based, which leverages known malignant cells from the single-cell experiment, and reference-free mode, which employs a statistical procedure to estimate the CNV load cut-off. Currently, we utilize the reference-free mode.</p>
+</div>
+<h4 id="22-consensus-approach-under-development">2.2. Consensus approach (under development)<a class="headerlink" href="#22-consensus-approach-under-development" title="Permanent link">#</a></h4>
+<p>Alternatively, we also offer annotations derived from the consensus approach (<strong>under development</strong>), which appears to more effectively capture smaller cell populations. However, neither approach can be considered flawless.</p>
+<p><a class="glightbox" href="../figures/umap-consensus.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-consensus.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The user can change malignancy classifier by switching the parameter, <code>input_stratification_method</code>. The options are <strong>infercnv_label</strong> or <strong>consensus_label</strong>.</p>
+</div>
+<h4 id="23-cd45-marker-based-on-facs">2.3. CD45 marker based on FACS<a class="headerlink" href="#23-cd45-marker-based-on-facs" title="Permanent link">#</a></h4>
+<p><a class="glightbox" href="../figures/umap-cd45.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-cd45.png" /></a></p>
+<p>The malignancy prediction can generally be correlated with CD45 status (protein-level expression). However, minor discrepancies might be linked to the presence of <strong>normal</strong> epithelial cells in the dataset.</p>
 
 
 
