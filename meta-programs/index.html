@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/meta-programs/">
       
       
-        <link rel="prev" href="../trajectory/">
+        <link rel="prev" href="../cell-communcation/">
       
       
-        <link rel="next" href="../workflow-and-modules/">
+        <link rel="next" href="../command-line-interface/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -411,26 +411,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../trajectory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. Cell trajectory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -486,8 +466,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    Parameters
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-Step
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-meta-program-and-ith-prediction" class="md-nav__link">
+    2.1. Meta-program and ITH prediction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ith-signatures" class="md-nav__link">
+    2.2. ITH signatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
   </a>
   
 </li>
@@ -543,26 +570,6 @@
             Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow-and-modules/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Workflows and Modules
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -746,8 +753,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    Parameters
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-Step
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-meta-program-and-ith-prediction" class="md-nav__link">
+    2.1. Meta-program and ITH prediction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ith-signatures" class="md-nav__link">
+    2.2. ITH signatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
   </a>
   
 </li>
@@ -769,8 +823,37 @@
 
 <h1 id="malignant-meta-programs">Malignant meta-programs<a class="headerlink" href="#malignant-meta-programs" title="Permanent link">#</a></h1>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
-<p>Meta-programs in single-cell analysis streamline the intricate transcriptional patterns identified in diverse cell types through scRNA-seq. By condensing this complex data into overarching themes, meta-program analysis provides a clearer perspective on shared cellular processes. This approach is essential for harnessing the depth of scRNA-seq data, facilitating a deeper understanding of disease mechanisms and highlighting potential therapeutic targets.</p>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h2>
+<p>Meta-program analyses are powerful strategies for uncovering intratumor heterogeneity. We built our meta-program module based on data published by Gavish et al. These meta-programs encompass a range of cellular processes, covering both generic patterns (such as cell cycle and stress) and cancer lineage-specific ones, e.g., 11 hallmarks associated with intratumor heterogeneity.</p>
+<h2 id="step-by-step">Step-by-Step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
+<h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">HPC</p>
+<ul>
+<li><code>input_meta_programs_db</code>    = ./assets/meta_programs_database.csv</li>
+<li><code>input_cell_category</code>       = Malignant</li>
+<li><code>input_heatmap_annotation</code>  = source_name;seurat_clusters</li>
+</ul>
+</div>
+<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Cirro</p>
+<ul>
+<li><code>Input meta-program</code>                                          = Default</li>
+<li><code>Meta-program cell category</code>                                  = Malignant</li>
+<li><code>Meta-data columns to be displayed on heatmap</code>                = source_name;seurat_clusters</li>
+</ul>
+</div>
+<h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
+<h4 id="21-meta-program-and-ith-prediction">2.1. Meta-program and ITH prediction<a class="headerlink" href="#21-meta-program-and-ith-prediction" title="Permanent link">#</a></h4>
+<p><a class="glightbox" href="../figures/heatmap-meta-programs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/heatmap-meta-programs.png" /></a></p>
+<h4 id="22-ith-signatures">2.2. ITH signatures<a class="headerlink" href="#22-ith-signatures" title="Permanent link">#</a></h4>
+<p><a class="glightbox" href="../figures/featureplot-meta-program.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/featureplot-meta-program.png" /></a></p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
+<ol>
+<li><a href="https://www.nature.com/articles/s41586-023-06130-4">Hallmarks of transcriptional intratumour heterogeneity across a thousand tumours</a></li>
+</ol>
 
 
 

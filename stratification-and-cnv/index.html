@@ -439,6 +439,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -514,26 +521,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../trajectory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. Cell trajectory
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../meta-programs/" class="md-nav__link">
         
   
@@ -590,26 +577,6 @@
             Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow-and-modules/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Workflows and Modules
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -846,6 +813,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -893,10 +867,10 @@
 <p><a class="glightbox" href="../figures/umap-infercnv.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-infercnv.png" /></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>InferCNV predictions are carried out in two distinct modes: reference-based, which leverages known malignant cells from the single-cell experiment, and reference-free mode, which employs a statistical procedure to estimate the CNV load cut-off. Currently, we utilize the reference-free mode.</p>
+<p>InferCNV predictions are carried out in two distinct modes: reference-based, which leverages known malignant cells from the single-cell experiment, and reference-free mode, which employs a statistical procedure to estimate the CNV load cut-off. Currently, we utilize the reference-free mode. <strong>The pipeline stores the inferCNV heatmap in the data folder</strong>.</p>
 </div>
 <h4 id="22-consensus-approach-under-development">2.2. Consensus approach (under development)<a class="headerlink" href="#22-consensus-approach-under-development" title="Permanent link">#</a></h4>
-<p>Alternatively, we also offer annotations derived from the consensus approach (<strong>under development</strong>), which appears to more effectively capture smaller cell populations. However, neither approach can be considered flawless.</p>
+<p>Alternatively, we also offer annotations based on the consensus approach (<strong>under development</strong>), which appears to more effectively capture smaller cell populations. However, neither approach can be considered flawless.</p>
 <p><a class="glightbox" href="../figures/umap-consensus.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-consensus.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -905,6 +879,7 @@
 <h4 id="23-cd45-marker-based-on-facs">2.3. CD45 marker based on FACS<a class="headerlink" href="#23-cd45-marker-based-on-facs" title="Permanent link">#</a></h4>
 <p><a class="glightbox" href="../figures/umap-cd45.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-cd45.png" /></a></p>
 <p>The malignancy prediction can generally be correlated with CD45 status (protein-level expression). However, minor discrepancies might be linked to the presence of <strong>normal</strong> epithelial cells in the dataset.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
 
 
 

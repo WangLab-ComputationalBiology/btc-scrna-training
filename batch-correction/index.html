@@ -429,15 +429,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    2.1.
+  <a href="#21-quality-control-table" class="md-nav__link">
+    2.1. Quality control table
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    2.2.
+  <a href="#22-before-and-after" class="md-nav__link">
+    2.2. Before and after
   </a>
   
 </li>
@@ -453,8 +453,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#reference" class="md-nav__link">
+    Reference
   </a>
   
 </li>
@@ -499,26 +499,6 @@
   
   <span class="md-ellipsis">
     6. Cell-cell communication
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trajectory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. Cell trajectory
   </span>
   
 
@@ -590,26 +570,6 @@
             Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow-and-modules/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Workflows and Modules
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -816,15 +776,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    2.1.
+  <a href="#21-quality-control-table" class="md-nav__link">
+    2.1. Quality control table
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    2.2.
+  <a href="#22-before-and-after" class="md-nav__link">
+    2.2. Before and after
   </a>
   
 </li>
@@ -840,8 +800,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#reference" class="md-nav__link">
+    Reference
   </a>
   
 </li>
@@ -865,7 +825,7 @@
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
 <p>Batch correction in single-cell transcriptomics mitigates unwanted technical variations inherent in single-cell RNA sequencing (scRNA-seq) data. These technical or batch effects can stem from varying experimental conditions or sequencing platforms. If left unaddressed, they can obscure genuine biological signals. To tackle this, we have incorporated several batch correction methods, including CCA, FastMNN, RPCA, and Harmony. Additionally, the pipeline can compute various quality metrics to determine which method excels for a specific dataset.</p>
 <h2 id="step-by-step">Step-by-step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
-<p>The batch module consists of two steps: batch effect correction and assessment using quality metrics. The criteria for these quality metrics were established based on the XXXX and XXXX publications. Additionally, we leverage kBET, a renowned method for assessing batch correction in single-cell projects.</p>
+<p>The batch module consists of two steps: batch effect correction and assessment using quality metrics. The criteria for these quality metrics were established based on the scIB publication. Additionally, we leverage kBET, a renowned method for assessing batch correction in single-cell projects.</p>
 <h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
 <div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
 </code></pre></div>
@@ -888,9 +848,14 @@
 </ul>
 </div>
 <h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
-<h4 id="21">2.1.<a class="headerlink" href="#21" title="Permanent link">#</a></h4>
-<h4 id="22">2.2.<a class="headerlink" href="#22" title="Permanent link">#</a></h4>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
+<h4 id="21-quality-control-table">2.1. Quality control table<a class="headerlink" href="#21-quality-control-table" title="Permanent link">#</a></h4>
+<h4 id="22-before-and-after">2.2. Before and after<a class="headerlink" href="#22-before-and-after" title="Permanent link">#</a></h4>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
+<ol>
+<li><a href="https://www.nature.com/articles/s41592-018-0254-1">A test metric for assessing single-cell RNA-seq batch correction</a></li>
+<li><a href="https://www.nature.com/articles/s41592-021-01336-8">Benchmarking atlas-level data integration in single-cell genomics</a></li>
+<li><a href="[scPOP](https://github.com/vinay-swamy/scPOP)">scPOP</a></li>
+</ol>
 
 
 

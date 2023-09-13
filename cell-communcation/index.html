@@ -14,7 +14,7 @@
         <link rel="prev" href="../cell-annotation/">
       
       
-        <link rel="next" href="../trajectory/">
+        <link rel="next" href="../meta-programs/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -446,16 +446,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
   </a>
   
-    <nav class="md-nav" aria-label="Hands-on">
+    <nav class="md-nav" aria-label="Step-by-step">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    Step 1
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-liana-output" class="md-nav__link">
+    2.1. LIANA output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cellchat-output" class="md-nav__link">
+    2.2. CellChat output
   </a>
   
 </li>
@@ -464,31 +486,23 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
       
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trajectory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. Cell trajectory
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -556,26 +570,6 @@
             Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow-and-modules/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Workflows and Modules
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -759,22 +753,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
   </a>
   
-    <nav class="md-nav" aria-label="Hands-on">
+    <nav class="md-nav" aria-label="Step-by-step">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    Step 1
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-liana-output" class="md-nav__link">
+    2.1. LIANA output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cellchat-output" class="md-nav__link">
+    2.2. CellChat output
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
   
 </li>
       
@@ -795,9 +823,34 @@
 
 <h1 id="cell-cell-communication">Cell-cell communication<a class="headerlink" href="#cell-cell-communication" title="Permanent link">#</a></h1>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
-<p>Cell-cell communication analysis in single-cell studies delves into the intricate interactions between different cell types within a tissue or tumor. Utilizing scRNA-seq data, this analysis identifies potential signaling pathways and molecular messengers, like ligands and receptors, that mediate these interactions. By mapping out these communication networks, researchers gain insights into the cooperative and competitive dynamics that govern cellular behaviors. This understanding is crucial for deciphering the complex orchestration of cellular functions in health and disease, offering avenues to disrupt pathological interactions or enhance beneficial ones.</p>
-<h2 id="hands-on">Hands-on<a class="headerlink" href="#hands-on" title="Permanent link">#</a></h2>
-<h3 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">#</a></h3>
+<p>Cell-cell communication analysis offers insights into the interactions among different cell types within a tissue or tumor. These interactions form intricate networks that can reveal mechanisms associated with alterations in the tumor microenvironment and disease progression. To decipher this complex orchestration, we utilize well-established methods from the literature, specifically <strong>CellChat</strong> and <strong>LIANA</strong>.</p>
+<h2 id="step-by-step">Step-by-step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">HPC</p>
+<ul>
+<li><code>input_cell_markers_db</code>    = ./assets/cell_markers_database.csv</li>
+<li><code>input_annotation_level</code>   = Major cells</li>
+</ul>
+</div>
+<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Cirro</p>
+<ul>
+<li><code>Input cell markers</code>              = Default</li>
+<li><code>Annotation level</code>                = Major cells</li>
+</ul>
+</div>
+<h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
+<h4 id="21-liana-output">2.1. LIANA output<a class="headerlink" href="#21-liana-output" title="Permanent link">#</a></h4>
+<h4 id="22-cellchat-output">2.2. CellChat output<a class="headerlink" href="#22-cellchat-output" title="Permanent link">#</a></h4>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
+<ol>
+<li><a href="https://link.springer.com/article/10.1186/s12859-020-03700-5">scTyper: a comprehensive pipeline for the cell typing analysis of single-cell RNA-seq data</a></li>
+</ol>
 
 
 

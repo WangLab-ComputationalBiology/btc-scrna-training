@@ -426,22 +426,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
   </a>
   
-    <nav class="md-nav" aria-label="Hands-on">
+    <nav class="md-nav" aria-label="Step-by-step">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    Step 1
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cell-annotation" class="md-nav__link">
+    2.1. Cell annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cell-signatures" class="md-nav__link">
+    2.2. Cell signatures
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -465,26 +499,6 @@
   
   <span class="md-ellipsis">
     6. Cell-cell communication
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trajectory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. Cell trajectory
   </span>
   
 
@@ -556,26 +570,6 @@
             Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow-and-modules/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Workflows and Modules
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -759,22 +753,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on" class="md-nav__link">
-    Hands-on
+  <a href="#step-by-step" class="md-nav__link">
+    Step-by-step
   </a>
   
-    <nav class="md-nav" aria-label="Hands-on">
+    <nav class="md-nav" aria-label="Step-by-step">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
-    Step 1
+  <a href="#1-running-pipeline" class="md-nav__link">
+    1. Running pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-inspecting-report" class="md-nav__link">
+    2. Inspecting report
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Inspecting report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cell-annotation" class="md-nav__link">
+    2.1. Cell annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cell-signatures" class="md-nav__link">
+    2.2. Cell signatures
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -795,9 +823,43 @@
 
 <h1 id="cell-annotation">Cell annotation<a class="headerlink" href="#cell-annotation" title="Permanent link">#</a></h1>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h2>
-<p>Cell annotation in single-cell studies assigns identities to cells based on their transcriptional profiles. Using scRNA-seq data, cells are categorized by specific marker genes, turning a complex gene expression matrix into a clear map of cellular diversity. This crucial step contextualizes the data, setting the stage for deeper analyses and insights into cell roles and interactions in various biological contexts.</p>
-<h2 id="hands-on">Hands-on<a class="headerlink" href="#hands-on" title="Permanent link">#</a></h2>
-<h3 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">#</a></h3>
+<p>Cell annotation is a procedure that assigns identities to cells based on their transcriptional profiles. This process can be programmatically executed using two distinct approaches: gene marker/signature-based and reference-based. In our pipeline, we leverage signature-based methods to assign cell identity</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>In the current version, we have tested the annotation only at the major cell level. However, users can execute it at multiple levels, such as T-cell subtypes on <strong>HPC version</strong>.</p>
+</div>
+<h2 id="step-by-step">Step-by-step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
+<p>To ensure reproducibility, we consolidated markers from various publications into a single <a href="https://raw.githubusercontent.com/break-through-cancer/btc-scrna-pipeline/main/assets/cell_markers_database.csv">database</a>. Altogether, the cell annotation database encompasses 390 gene markers across 13 distinct cell types.</p>
+<h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">HPC</p>
+<ul>
+<li><code>input_cell_markers_db</code>    = ./assets/cell_markers_database.csv</li>
+<li><code>input_annotation_level</code>   = Major cells</li>
+</ul>
+</div>
+<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Cirro</p>
+<ul>
+<li><code>Input cell markers</code>              = Default</li>
+<li><code>Annotation level</code>                = Major cells</li>
+</ul>
+</div>
+<p>Please be aware that the <code>input_cell_markers_db</code> parameter permits users to replace the cell annotation database. Alternatively, users can also append additional markers to the CSV file. Kindly refer to the <a href="../advanced/">Advanced</a> config section for a deeper understanding of this process.</p>
+<h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
+<h4 id="21-cell-annotation">2.1. Cell annotation<a class="headerlink" href="#21-cell-annotation" title="Permanent link">#</a></h4>
+<p>The <strong>nonMalignant</strong> cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells. </p>
+<p><a class="glightbox" href="../figures/umap-annotation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-annotation.png" /></a></p>
+<h4 id="22-cell-signatures">2.2. Cell signatures<a class="headerlink" href="#22-cell-signatures" title="Permanent link">#</a></h4>
+<p>Furthermore, the pipeline offers a FeaturePlot to examine module score values associated with each cell type across clusters.</p>
+<p><a class="glightbox" href="../figures/featureplot-annotation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/featureplot-annotation.png" /></a></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
+<ol>
+<li><a href="https://link.springer.com/article/10.1186/s12859-020-03700-5">scTyper: a comprehensive pipeline for the cell typing analysis of single-cell RNA-seq data</a></li>
+</ol>
 
 
 
