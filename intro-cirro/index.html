@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/workflow-and-modules/">
+        <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/intro-cirro/">
       
       
+        <link rel="prev" href="../advanced/">
+      
+      
+        <link rel="next" href="../command-line-interface/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Workflow and Modules - BTC scRNA-Seq Material</title>
+        <title>Introduction to Cirro - BTC scRNA-Seq Material</title>
       
     
     
@@ -82,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#workflow-and-modules" class="md-skip">
+        <a href="#introduction-to-cirro" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workflow and Modules
+              Introduction to Cirro
             
           </span>
         </div>
@@ -251,19 +255,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -276,7 +280,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -287,9 +291,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../intro-cirro/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction to Cirro
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -298,6 +322,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines-area" class="md-nav__link">
+    Pipelines area
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btc-scrna-settings" class="md-nav__link">
+    BTC scRNA settings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -654,6 +712,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines-area" class="md-nav__link">
+    Pipelines area
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btc-scrna-settings" class="md-nav__link">
+    BTC scRNA settings
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -667,7 +747,13 @@
                   
 
 
-<h1 id="workflow-and-modules">Workflow and Modules<a class="headerlink" href="#workflow-and-modules" title="Permanent link">#</a></h1>
+<h1 id="introduction-to-cirro">Introduction to Cirro<a class="headerlink" href="#introduction-to-cirro" title="Permanent link">#</a></h1>
+<p>Cirro is a cloud platform that simplifies access to cutting-edge pipelines to address common research challenges. Central to Cirro's mission is enhancing the research experience, enabling users to concentrate on scientific inquiries rather than software. Throughout this training, we will be incorporating Cirro in several tutorials.</p>
+<h2 id="pipelines-area">Pipelines area<a class="headerlink" href="#pipelines-area" title="Permanent link">#</a></h2>
+<p><a class="glightbox" href="../figures/ciro-interface-step1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/ciro-interface-step1.png" /></a></p>
+<h2 id="btc-scrna-settings">BTC scRNA settings<a class="headerlink" href="#btc-scrna-settings" title="Permanent link">#</a></h2>
+<p>When configuring the pipeline form, there are a few essential settings for this training. Ensure the <code>Dataset</code> is set to <strong>BTC Training dataset</strong> and the <code>Copy Parameters From</code> option is selected as <strong>Run_01</strong>.</p>
+<p><a class="glightbox" href="../figures/ciro-interface-step2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/ciro-interface-step2.png" /></a></p>
 
 
 

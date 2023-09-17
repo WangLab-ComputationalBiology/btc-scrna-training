@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://github.com/WangLab-ComputationalBiology/btc-scrna-training/quality-control/">
       
       
-        <link rel="prev" href="../advanced/">
+        <link rel="prev" href="../command-line-interface/">
       
       
         <link rel="next" href="../dimensionality-clustering/">
@@ -255,6 +255,89 @@
       
   
   
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cirro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Cirro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-line-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command-line interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -267,9 +350,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -280,8 +363,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
           </label>
@@ -370,6 +453,19 @@
   <a href="#1-running-pipeline" class="md-nav__link">
     1. Running pipeline
   </a>
+  
+    <nav class="md-nav" aria-label="1. Running pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-on-hpc" class="md-nav__link">
+    1.1. On HPC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -519,69 +615,6 @@
   
   <span class="md-ellipsis">
     8. Malignant meta-programs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Documentation
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Documentation
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../command-line-interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Command-line interface
   </span>
   
 
@@ -778,6 +811,19 @@
     1. Running pipeline
   </a>
   
+    <nav class="md-nav" aria-label="1. Running pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-on-hpc" class="md-nav__link">
+    1.1. On HPC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -837,8 +883,7 @@
 <p>The current pipeline version covers most common QC metrics, including the parameters described below. In this tutorial, we will cover the very basic steps regarding Cellranger alignment and sample filtering.</p>
 <h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
 <p>To improve reproducibility we suggest several thresholds based on multiple reports on literature (see below). In addition, for this training we will leverage a dataset derived MSK Spectrum <a href="https://www.nature.com/articles/s41586-022-05496-1">[1]</a>. The dataset can be download through the BTC Buckets <a href="">[2]</a>.</p>
-<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
-</code></pre></div>
+<h4 id="11-on-hpc">1.1. On HPC<a class="headerlink" href="#11-on-hpc" title="Permanent link">#</a></h4>
 <p>By default the previous command line considers thresholds.</p>
 <div class="admonition info">
 <p class="admonition-title">HPC</p>
@@ -853,9 +898,11 @@
 <li><code>thr_n_observed_cells</code>        = 300</li>
 </ul>
 </div>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+</code></pre></div>
 <h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
 <p>A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample.</p>
-<p><a class="glightbox" href="https://dummyimage.com/600x400/" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="https://dummyimage.com/600x400/" /></a></p>
+<p><a class="glightbox" href="report-table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="report-table.png" /></a></p>
 <p>The QC table displays metrics related to multiple samples, along with a QC label indicating the status of each sample (SUCCESS, FIXABLE, or FAILURE). The filtering system was developed with a focus on traceability, allowing users to inspect which metrics do not meet expectations and make necessary adjustments. Additionally, it enables users to determine whether the samples are failing at the library preparation stage or due to cell-level quality issues.</p>
 <h3 id="3-adjusting-filterings">3. Adjusting filterings<a class="headerlink" href="#3-adjusting-filterings" title="Permanent link">#</a></h3>
 <p>Now that we have assessed the quality control reports, we will proceed with the analysis by adjusting the threshold. In this case, we will be more permissive to include the <strong>SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY</strong> sample. To achieve this, we will change the <code>thr_n_observed_cells</code> to 250 cells after filtering mitochondrial RNA percentage. Please note that this adjustment will be applied specifically to this subset, which contains only a fraction of cells per sample.</p>
@@ -866,6 +913,10 @@
 <p>The Nextflow caching system ensures that the alignment step is not rerun. As a result, only the QC filtering will be executed, along with the generation of the new project report.</p>
 </div>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
+<ol>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0092867421005833?via%3Dihub">Integrated analysis of multimodal single-cell data</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S2405471219300730">DoubletFinder: Doublet Detection in Single-Cell RNA Sequencing Data Using Artificial Nearest Neighbors</a></li>
+</ol>
 
 
 
