@@ -305,8 +305,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-shorten-command-line" class="md-nav__link">
-    4.3. Shorten command-line
+  <a href="#43-staging-images-and-genome-indexes" class="md-nav__link">
+    4.3. Staging images and genome indexes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-shorten-command-line" class="md-nav__link">
+    4.4. Shorten command-line
   </a>
   
 </li>
@@ -829,8 +836,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-shorten-command-line" class="md-nav__link">
-    4.3. Shorten command-line
+  <a href="#43-staging-images-and-genome-indexes" class="md-nav__link">
+    4.3. Staging images and genome indexes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-shorten-command-line" class="md-nav__link">
+    4.4. Shorten command-line
   </a>
   
 </li>
@@ -1191,7 +1205,11 @@
 <p><div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>&lt;PROJECT&gt;<span class="w"> </span>--sample_csv<span class="w"> </span>&lt;path/to/sample_table.csv&gt;<span class="w"> </span>--meta_data<span class="w"> </span>&lt;path/to/meta_data.csv&gt;<span class="w"> </span>--cancer_type<span class="w"> </span>&lt;CANCER<span class="w"> </span>TYPE&gt;<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>&lt;PROFILE&gt;
 </code></pre></div>
 At the end, the pipeline will make a folder named after the <code>--project_name</code> command. This folder will have all the results. The <code>-resume</code> command leverage Nextflow caching, i.e., resuming executions to avoid undesirable computational time.</p>
-<h4 id="43-shorten-command-line">4.3. Shorten command-line<a class="headerlink" href="#43-shorten-command-line" title="Permanent link">#</a></h4>
+<h4 id="43-staging-images-and-genome-indexes">4.3. Staging images and genome indexes<a class="headerlink" href="#43-staging-images-and-genome-indexes" title="Permanent link">#</a></h4>
+<p>The pipeline needs to stage (download) multiple components to run. This can pose challenges in HPC environments with strict network policies. As a solution, consider using the <code>-stub</code> option on a node with a network connection. The <code>-stub</code> will stage all the necessary components without actually executing any analysis. Thus, it serves as a bootstrap run for the pipeline. Please note that <strong>stub</strong> will generate dummy outputs.</p>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>&lt;PROJECT&gt;<span class="w"> </span>--sample_csv<span class="w"> </span>&lt;path/to/sample_table.csv&gt;<span class="w"> </span>--meta_data<span class="w"> </span>&lt;path/to/meta_data.csv&gt;<span class="w"> </span>--cancer_type<span class="w"> </span>&lt;CANCER<span class="w"> </span>TYPE&gt;<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>&lt;PROFILE&gt;<span class="w"> </span>-stub
+</code></pre></div>
+<h4 id="44-shorten-command-line">4.4. Shorten command-line<a class="headerlink" href="#44-shorten-command-line" title="Permanent link">#</a></h4>
 <p>Long command lines can be tricky. Thankfully, with Nextflow's <code>-params-file</code>, we can make things simpler. This is a JSON file that has all the instructions related to a specific run. If you're trying out different settings, it could a best practices to keep separate files for each test, e.g., PARAMS_TEST_01.json or PARAMS_TEST_02.json.</p>
 <div class="copy highlight"><pre><span></span><code><span class="o">{</span>
 <span class="w"> </span><span class="s2">&quot;project_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;BTC-CANCER-X&quot;</span>,

@@ -329,6 +329,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-adding-custom-genomes-on-the-pipeline-cellranger-alignment" class="md-nav__link">
+    3. Adding custom genomes on the pipeline (Cellranger alignment).
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -812,6 +819,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-adding-custom-genomes-on-the-pipeline-cellranger-alignment" class="md-nav__link">
+    3. Adding custom genomes on the pipeline (Cellranger alignment).
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -936,7 +950,7 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Note that each marker (gene) is into a single row. This long format is related with best practices for data analysis.</p>
+<p>Note that each marker (gene) is presented in a single row. This long format aligns with best practices for data analysis.</p>
 </div>
 <h4 id="21-meta-programs">2.1. Meta-programs<a class="headerlink" href="#21-meta-programs" title="Permanent link">#</a></h4>
 <p>Similar to customizing cell markers, users will need to adhere to pre-established standards. The <code>source</code> column will serve as the anchor that the pipeline uses to subset the meta-programs database.</p>
@@ -1001,6 +1015,29 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h3 id="3-adding-custom-genomes-on-the-pipeline-cellranger-alignment">3. Adding custom genomes on the pipeline (Cellranger alignment).<a class="headerlink" href="#3-adding-custom-genomes-on-the-pipeline-cellranger-alignment" title="Permanent link">#</a></h3>
+<p>The pipeline employs Cellranger for alignment. We set up the reference genome based on Gencode (v46) and GRCH38. To achieve this, we adhered to the tutorial provided in the 10x Genomics <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/release-notes/build#grch38_%23%7Bfiles.refdata_GRCh38.version%7D">documentation</a>. </p>
+<p>Alternatively, users can substitute it with a version of their choice, but certain conventions must be observed. The <strong>mkref</strong> output should be stored in a folder that adheres to the following structure: </p>
+<div class="highlight"><pre><span></span><code>Genomes/Homo_sapiens/ANNOTATION/GENOME_VERSION/
+</code></pre></div>
+<p>The terms <strong>ANNOTATION</strong> and <strong>GENOME_VERSION</strong> should be replaced with the user's preferred choices. Next, the user will need to replace edit a few lines on <code>conf/igenomes.config</code> within <code>btc-scrna-pipeline</code> folder. </p>
+<div class="highlight"><pre><span></span><code>params {
+    // illumina iGenomes reference file paths
+    genomes {
+        &#39;GRCh38&#39; {
+            cellranger       = &quot;${params.igenomes_base}/Genomes/Homo_sapiens/Gencode46/GRCh38&quot;
+        }
+        // Add your custom genome here
+        &#39;Custom&#39; {
+            cellranger       = &quot;${params.igenomes_base}/Genomes/Homo_sapiens/ANNOTATION/GENOME_VERSION&quot;
+        }
+    }
+}
+</code></pre></div>
+<p>Finally, the command line should have both <code>genome</code> and <code>igenomes_base</code> parameters.</p>
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>--genome<span class="w"> </span>Custom<span class="w"> </span>path/to/Genomes/Homo_sapiens/ANNOTATION/GENOME_VERSION<span class="s2">&quot; --igenomes_base -resume -profile seadragon</span>
+</code></pre></div>
 
 
 
