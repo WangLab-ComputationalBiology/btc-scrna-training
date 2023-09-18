@@ -1182,6 +1182,10 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Internally, the pipeline expects the batch column. This column will be used to perform the batch correction approach.</p>
+</div>
 <h4 id="42-minimal-command-line">4.2. Minimal command-line<a class="headerlink" href="#42-minimal-command-line" title="Permanent link">#</a></h4>
 <p>To execute the pipeline, users should use the command line structure outlined below. <strong>Please</strong>, note the semantic differences between using one dash (-) for Nextflow commands and two dashes (--) for pipeline commands. Commands with two dashes are just for specific pipeline tasks, like adjusting filtering or thresholds on the single-cell analysis.</p>
 <p><div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>&lt;PROJECT&gt;<span class="w"> </span>--sample_csv<span class="w"> </span>&lt;path/to/sample_table.csv&gt;<span class="w"> </span>--meta_data<span class="w"> </span>&lt;path/to/meta_data.csv&gt;<span class="w"> </span>--cancer_type<span class="w"> </span>&lt;CANCER<span class="w"> </span>TYPE&gt;<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>&lt;PROFILE&gt;

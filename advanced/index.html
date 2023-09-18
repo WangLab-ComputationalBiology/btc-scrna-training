@@ -307,6 +307,26 @@
     2. Adding gene signatures and meta-programs
   </a>
   
+    <nav class="md-nav" aria-label="2. Adding gene signatures and meta-programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cell-markers" class="md-nav__link">
+    2.1. Cell Markers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-meta-programs" class="md-nav__link">
+    2.1. Meta-programs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -770,6 +790,26 @@
     2. Adding gene signatures and meta-programs
   </a>
   
+    <nav class="md-nav" aria-label="2. Adding gene signatures and meta-programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cell-markers" class="md-nav__link">
+    2.1. Cell Markers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-meta-programs" class="md-nav__link">
+    2.1. Meta-programs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -822,8 +862,145 @@
 <h4 id="12-container-and-nextflow-pipelines">1.2. Container and Nextflow pipelines<a class="headerlink" href="#12-container-and-nextflow-pipelines" title="Permanent link">#</a></h4>
 <p>Note that Nextflow pipelines are integrated with containers to guarantee reproducibility and portability. This integration ensures that during the pipeline execution, each module is encapsulated within a predefined computational environment, encompassing all necessary software, libraries, and programming languages. As a result, researchers can be confident that their workflows will produce consistent results across different platforms and that these workflows can be easily shared and executed by collaborators in diverse computing environments.</p>
 <p><a class="glightbox" href="../figures/schema-geniac-container.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/schema-geniac-container.gif" /></a></p>
+<p><strong>Figure from <a href="https://open-research-europe.ec.europa.eu/articles/1-76">Geniac</a></strong></p>
 <hr />
 <h3 id="2-adding-gene-signatures-and-meta-programs">2. Adding gene signatures and meta-programs<a class="headerlink" href="#2-adding-gene-signatures-and-meta-programs" title="Permanent link">#</a></h3>
+<p>The pipeline allows flexibility regarding cell or meta-program markers. Currently, we provide two databases with curated cell markers <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv">1</a> and meta-programs <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/meta_programs_database.csv">2</a>.</p>
+<h4 id="21-cell-markers">2.1. Cell Markers<a class="headerlink" href="#21-cell-markers" title="Permanent link">#</a></h4>
+<p>To customize the cell markers database, it's essential to adhere to pipeline conventions. Firstly, the table should consist of four columns, as detailed below. Most importantly, the cell type column will determine the annotation level at which the pipeline will operate.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">cell_subset</th>
+<th style="text-align: left;">cell_type</th>
+<th style="text-align: left;">annotation</th>
+<th style="text-align: left;">markers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">T-Cells</td>
+<td style="text-align: left;">CD3D</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">T-Cells</td>
+<td style="text-align: left;">CD3E</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">T-Cells</td>
+<td style="text-align: left;">CD4</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">T-Cells</td>
+<td style="text-align: left;">CD8A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">T-Cells</td>
+<td style="text-align: left;">CD8B</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">NK Cells</td>
+<td style="text-align: left;">NCAM1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">NK Cells</td>
+<td style="text-align: left;">KLRG1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">NK Cells</td>
+<td style="text-align: left;">FCGR3A</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lineage markers Subsets</td>
+<td style="text-align: left;">Major cells</td>
+<td style="text-align: left;">NK Cells</td>
+<td style="text-align: left;">NKG7</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Note that each marker (gene) is into a single row. This long format is related with best practices for data analysis.</p>
+</div>
+<h4 id="21-meta-programs">2.1. Meta-programs<a class="headerlink" href="#21-meta-programs" title="Permanent link">#</a></h4>
+<p>Similar to customizing cell markers, users will need to adhere to pre-established standards. The <code>source</code> column will serve as the anchor that the pipeline uses to subset the meta-programs database.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">source</th>
+<th style="text-align: left;">meta_program</th>
+<th style="text-align: left;">gene_marker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">SPARCL1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">GFAP</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">CLU</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">CRYAB</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">TTYH1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">SLC1A3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">CST3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">ID3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">AGT</td>
+</tr>
+<tr>
+<td style="text-align: left;">Malignant</td>
+<td style="text-align: left;">Astrocytes</td>
+<td style="text-align: left;">APOE</td>
+</tr>
+</tbody>
+</table>
 
 
 

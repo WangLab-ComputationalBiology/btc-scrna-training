@@ -1,0 +1,10 @@
+cell_subset,cell_type,annotation,markers
+Lineage markers Subsets,Major cells,T-Cells,CD3D
+Lineage markers Subsets,Major cells,T-Cells,CD3E
+Lineage markers Subsets,Major cells,T-Cells,CD4
+Lineage markers Subsets,Major cells,T-Cells,CD8A
+Lineage markers Subsets,Major cells,T-Cells,CD8B
+Lineage markers Subsets,Major cells,NK Cells,NCAM1
+Lineage markers Subsets,Major cells,NK Cells,KLRG1
+Lineage markers Subsets,Major cells,NK Cells,FCGR3A
+Lineage markers Subsets,Major cells,NK Cells,NKG7
