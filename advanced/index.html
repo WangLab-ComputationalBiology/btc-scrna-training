@@ -290,6 +290,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#12-container-and-nextflow-pipelines" class="md-nav__link">
+    1.2. Container and Nextflow pipelines
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -746,6 +753,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#12-container-and-nextflow-pipelines" class="md-nav__link">
+    1.2. Container and Nextflow pipelines
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -804,9 +818,12 @@
 <span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
-<p>The previous snippet creates a profile for a institution powered by SLURM. It includes several settings, such as loading modules like <code>singularity/3.7.0</code>, and specifying the job scheduling engine with the <code>executor</code> property. Nextflow works with many engines; for more details, refer to the official <a href="https://nf-co.re/docs/usage/tutorials/step_by_step_institutional_profile">documentation</a>. Please note that the <code>process</code>  scope should match the HPC specs, i.e., queue, memory and cpus.</p>
+<p>The previous snippet creates a profile for a institution powered by SLURM. It includes several settings, such as loading modules like <code>singularity/3.7.0</code>, and specifying the job scheduling engine with the <code>executor</code> property. Nextflow works with many engines; for more details, refer to the official <a href="https://nf-co.re/docs/usage/tutorials/step_by_step_institutional_profile">documentation</a>. Please note that the <code>process</code> scope should match the HPC specs, i.e., queue, memory and cpus.</p>
+<h4 id="12-container-and-nextflow-pipelines">1.2. Container and Nextflow pipelines<a class="headerlink" href="#12-container-and-nextflow-pipelines" title="Permanent link">#</a></h4>
+<p>Note that Nextflow pipelines are integrated with containers to guarantee reproducibility and portability. This integration ensures that during the pipeline execution, each module is encapsulated within a predefined computational environment, encompassing all necessary software, libraries, and programming languages. As a result, researchers can be confident that their workflows will produce consistent results across different platforms and that these workflows can be easily shared and executed by collaborators in diverse computing environments.</p>
+<p><a class="glightbox" href="../figures/schema-geniac-container.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/schema-geniac-container.gif" /></a></p>
 <hr />
-<h2 id="2-adding-gene-signatures-and-meta-programs">2. Adding gene signatures and meta-programs<a class="headerlink" href="#2-adding-gene-signatures-and-meta-programs" title="Permanent link">#</a></h2>
+<h3 id="2-adding-gene-signatures-and-meta-programs">2. Adding gene signatures and meta-programs<a class="headerlink" href="#2-adding-gene-signatures-and-meta-programs" title="Permanent link">#</a></h3>
 
 
 
