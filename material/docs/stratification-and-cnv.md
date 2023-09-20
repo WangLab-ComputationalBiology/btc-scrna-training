@@ -44,7 +44,7 @@ For your reference, the figures we are discussing are located in the `Test_strat
 
 #### 2.1. InferCNV predictions
 
-The first UMAP displays malignancy status based on inferCNV predictions. By default, the pipeline will utilize this annotation for downstream analysis. The inferCNV leverages in a hidden Markov model (HMM) to identify copy number variations (CNVs) status based on expression data. It is a time-consuming task, therefore we applied a heuristic to subsampling cells per cluster, `thr_cluster_size`. In summary, the method performs well, but it has limitations displaying misassigned cells, and low accuracy in small populations.
+The first UMAP displays malignancy status based on inferCNV predictions. By default, the pipeline will utilize this annotation for downstream analysis. The inferCNV utilizes a time-consuming statistical method, therefore we applied a heuristic approach by subsampling cells per cluster, `thr_cluster_size`. In summary, the method performs well, but it has limitations in displaying misassigned cells, and low accuracy in small populations.
 
 ![Image caption](figures/umap-infercnv.png){align=center}
 
