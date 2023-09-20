@@ -937,6 +937,7 @@
 <li><code>Consensus score threshold (Beta)</code>                  = 2</li>
 </ul>
 </div>
+<p><strong>Please note:</strong> When setting up the pipeline form make sure the <code>Dataset</code> is configured to <strong>BTC Training dataset</strong> and choose <strong>Run_01</strong> for the <code>Copy Parameters From option</code>. Additionally, set the <code>Entrypoint parameter</code> to <strong>Complete</strong>.</p>
 <h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
 <h4 id="21-infercnv-predictions">2.1. InferCNV predictions<a class="headerlink" href="#21-infercnv-predictions" title="Permanent link">#</a></h4>
 <p>The first UMAP displays malignancy status based on inferCNV predictions. By default, the pipeline will utilize this annotation for downstream analysis. The inferCNV leverages in a hidden Markov model (HMM) to identify copy number variations (CNVs) status based on expression data. It is a time-consuming task, therefore we applied a heuristic to subsampling cells per cluster, <code>thr_cluster_size</code>. In summary, the method performs well, but it has limitations displaying misassigned cells, and low accuracy in small populations.</p>
