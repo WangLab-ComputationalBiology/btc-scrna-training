@@ -50,6 +50,13 @@ Similar to the cell annotation module, we also offer a FeaturePlot panel that re
 
 ![Image caption](figures/featureplot-meta-program.png){align=center}
 
+### 3. Exercise: Customizing the meta-program annotation
+
+!!! note "Question"
+
+    Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap?
+
+
 ## Reference
 
 1. [Hallmarks of transcriptional intratumour heterogeneity across a thousand tumours](https://www.nature.com/articles/s41586-023-06130-4)

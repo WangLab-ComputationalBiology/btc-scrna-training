@@ -668,6 +668,32 @@
 
 
 <h1 id="workflow-and-modules">Workflow and Modules<a class="headerlink" href="#workflow-and-modules" title="Permanent link">#</a></h1>
+<pre class="mermaid"><code>classDiagram
+  Person &lt;|-- Student
+  Person &lt;|-- Professor
+  Person : +String name
+  Person : +String phoneNumber
+  Person : +String emailAddress
+  Person: +purchaseParkingPass()
+  Address "1" &lt;-- "0..1" Person:lives at
+  class Student{
+    +int studentNumber
+    +int averageMark
+    +isEligibleToEnrol()
+    +getSeminarsTaken()
+  }
+  class Professor{
+    +int salary
+  }
+  class Address{
+    +String street
+    +String city
+    +String state
+    +int postalCode
+    +String country
+    -validate()
+    +outputAsLabel()  
+  }</code></pre>
 
 
 
