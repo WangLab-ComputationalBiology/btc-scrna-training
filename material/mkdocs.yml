@@ -38,7 +38,7 @@ nav:
     - '5. Cell annotation': cell-annotation.md
     - '6. Cell-cell communication': cell-communcation.md
    #- '7. Cell trajectory': trajectory.md
-    - '8. Malignant meta-programs': meta-programs.md
+    - '7. Malignant meta-programs': meta-programs.md
   - Contributing: contributing.md
   - FAQ: faq.md
   - About: 

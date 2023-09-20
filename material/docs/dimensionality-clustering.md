@@ -48,7 +48,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 For your reference, the figures we are discussing are located in the `Test_merged_report.html` and `Test_main_cluster_report.html` reports. You can find this report inside the **Run_01** folder.
 
-#### 2.1. Highly variable genes (HGV)
+#### 2.1. Highly variable genes (HVG)
 
 In the first report, produces multiple figures, including the HGV distribution on the dataset. Alternatively, the user can doublecheck which genes is contributing (loadings) to each principal component.
 
