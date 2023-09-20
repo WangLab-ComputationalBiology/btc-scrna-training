@@ -590,6 +590,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-exercise-manipulating-cell-cell-communication-database" class="md-nav__link">
+    3. Exercise: Manipulating cell-cell communication database
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -854,6 +861,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-exercise-manipulating-cell-cell-communication-database" class="md-nav__link">
+    3. Exercise: Manipulating cell-cell communication database
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -891,8 +905,9 @@
 <div class="admonition info">
 <p class="admonition-title">HPC</p>
 <ul>
-<li><code>input_cell_markers_db</code>    = ./assets/cell_markers_database.csv</li>
-<li><code>input_annotation_level</code>   = Major cells</li>
+<li><code>input_source_groups</code>         = all</li>
+<li><code>input_target_groups</code>         = all</li>
+<li><code>input_cellchat_annotation</code>   = Secreted Signaling</li>
 </ul>
 </div>
 <div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
@@ -902,8 +917,9 @@
 <div class="admonition info">
 <p class="admonition-title">Cirro</p>
 <ul>
-<li><code>Input cell markers</code>              = Default</li>
-<li><code>Annotation level</code>                = Major cells</li>
+<li><code>Source cell type names</code>              = all</li>
+<li><code>Target cell type names</code>              = all</li>
+<li><code>CellChat interactions type</code>          = Secreted Signaling</li>
 </ul>
 </div>
 <h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
@@ -916,6 +932,11 @@
 <p>Alternatively, we can explore results obtained exclusively from CellChat. The network displays various metrics related to interaction strength and frequency across populations. These can be further divided into cell-based plots, as detailed below.</p>
 <p><a class="glightbox" href="../figures/circus-cellchat.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/circus-cellchat.png" /></a></p>
 <p><a class="glightbox" href="../figures/circus-cellchat-subset.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/circus-cellchat-subset.png" /></a></p>
+<h3 id="3-exercise-manipulating-cell-cell-communication-database">3. Exercise: Manipulating cell-cell communication database<a class="headerlink" href="#3-exercise-manipulating-cell-cell-communication-database" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>What happens when switching the interaction type to Cell-Cell Contact?</p>
+</div>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
 <ol>
 <li><a href="https://www.nature.com/articles/s41467-022-30755-0">Comparison of methods and resources for cell-cell communication inference from single-cell RNA-Seq data</a></li>
