@@ -36,6 +36,8 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 ### 2. Inspecting report
 
+For your reference, the figures we are discussing are located in the `Test_communication_report.html` report. You can find this report inside the **Run_02** folder.
+
 #### 2.1. LIANA output
 
 The bubble plot illustrates the interactions between ligand-receptor (L-R) pairs across various cell types, including interaction specificity and expression magnitude metrics. Interaction specificity measures the degree of L-R exclusivity among cell types, i.e., putative a preferential "communication" pathway. Meanwhile, expression magnitude indicates the strength of L-R interactions within a cell population.

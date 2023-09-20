@@ -63,6 +63,8 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample.
 
+For your reference, the figures we are discussing are located in the `Test_project_metric_report.html` report. You can find this report inside the **Run_01** folder.
+
 ![Image caption](figures/report-table.png){align=center}
 
 The QC table displays metrics related to multiple samples, along with a QC label indicating the status of each sample (SUCCESS, FIXABLE, or FAILURE). The filtering system was developed with a focus on traceability, allowing users to inspect which metrics do not meet expectations and make necessary adjustments. Additionally, it enables users to determine whether the samples are failing at the library preparation stage or due to cell-level quality issues.

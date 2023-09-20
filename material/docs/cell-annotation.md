@@ -42,6 +42,8 @@ Be aware that the `input_cell_markers_db` parameter permits users to replace the
 
 ### 2. Inspecting report
 
+For your reference, the figures we are discussing are located in the `Test_annotation_report.html` report. You can find this report inside the **Run_02** folder.
+
 #### 2.1. Cell annotation
 
 The **nonMalignant** cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells. 

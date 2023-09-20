@@ -46,13 +46,15 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 ### 2. Inspecting report
 
+For your reference, the figures we are discussing are located in the `Test_merged_report.html` and `Test_main_cluster_report.html` reports. You can find this report inside the **Run_01** folder.
+
 #### 2.1. Highly variable genes (HGV)
 
 In the first report, produces multiple figures, including the HGV distribution on the dataset. Alternatively, the user can doublecheck which genes is contributing (loadings) to each principal component.
 
 ![Image caption](figures/pca-highly-variable-features.png){align=center}
 
-As mentione earlier, loadings represent the genes/features contribution to each principal component or other dimension reduction. Visualizing loadings provides insights in which genes are driving the separation observed in a particular component. In turn, these genes will strongly the clustering process.
+As mentioned earlier, loadings represent the genes/features contribution to each principal component or other dimension reduction. Visualizing loadings provides insights into which genes are driving the separation observed in a particular component. In turn, these genes will strongly affect the clustering process.
 
 ![Image caption](figures/pca-loadings.png){align=center}
 

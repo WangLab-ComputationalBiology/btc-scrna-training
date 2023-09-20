@@ -45,6 +45,8 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 ### 2. Inspecting report
 
+For your reference, the figures we are discussing are located in the `Test_evaluation_report.html` report. You can find this report inside the **Run_02** folder.
+
 #### 2.1. Batch evaluation table
 
 To ensure interpretability we incorporated multiple quality metrics. These metrics are related to both biological conservation and clustering quality.

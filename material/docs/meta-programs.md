@@ -36,6 +36,8 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 ### 2. Inspecting report
 
+For your reference, the figures we are discussing are located in the `Test_Malignant_meta_report.html` report. You can find this report inside the **Run_02** folder.
+
 #### 2.1. Meta-program and ITH prediction
 
 The heatmap offers a detailed overview of meta-programs associated with malignant cells. Moreover, users have the option to include annotations related to meta-data, such as **source_name** and **seurat_clusters**.

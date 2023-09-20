@@ -40,6 +40,8 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio). Please, be su
 
 ### 2. Inspecting report
 
+For your reference, the figures we are discussing are located in the `Test_stratification_report.html` report. You can find this report inside the **Run_02** folder.
+
 #### 2.1. InferCNV predictions
 
 The first UMAP displays malignancy status based on inferCNV predictions. By default, the pipeline will utilize this annotation for downstream analysis. The inferCNV leverages in a hidden Markov model (HMM) to identify copy number variations (CNVs) status based on expression data. It is a time-consuming task, therefore we applied a heuristic to subsampling cells per cluster, `thr_cluster_size`. In summary, the method performs well, but it has limitations displaying misassigned cells, and low accuracy in small populations.
