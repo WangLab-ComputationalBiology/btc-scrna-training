@@ -19,7 +19,7 @@ The current pipeline version covers most common QC metrics, including the parame
 
 ### 1. Running pipeline
 
-To improve reproducibility we suggest several thresholds based on multiple reports on literature (see below). In addition, for this training we will leverage a dataset derived MSK Spectrum [[1]](https://www.nature.com/articles/s41586-022-05496-1). The dataset can be download through the BTC Buckets [[2]]().
+To improve reproducibility we suggest several thresholds based on multiple reports on literature (see below). In addition, for this training we will leverage a dataset derived from MSK Spectrum [[1]](https://www.nature.com/articles/s41586-022-05496-1). The dataset can be download through the BTC Buckets.
 
 #### 1.1. On HPC
 
