@@ -4,7 +4,9 @@
 
 | Parameter | Description | Type | Default | 
 |-----------|-----------|-----------|-----------|
-| `workflow_level` | Entrypoint parameter | `string` | Complete |
+| `workflow_level` | Defining the pipeline entrypoint | `string` | Complete |
+| `skip_deg` | Skipping Differential expression analysis | `boolean` | false |
+| `skip_com` | Skipping Cell-cell communication analysis | `boolean` | false |
 
 ## Project parameters
 
