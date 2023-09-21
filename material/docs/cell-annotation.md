@@ -44,6 +44,11 @@ Be aware that the `input_cell_markers_db` parameter permits users to replace the
 
 For your reference, the figures we are discussing are located in the `Test_annotation_report.html` report. You can find this report inside the **Run_02** folder.
 
+!!! info
+
+    The database for **cell markers** is stored in the pipeline repository. You can access it [here](https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv). 
+
+
 #### 2.1. Cell annotation
 
 The **nonMalignant** cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells. 
@@ -56,6 +61,12 @@ The **nonMalignant** cells were categorized into six distinct populations: B/Pla
 Furthermore, the pipeline offers a FeaturePlot to examine module score values associated with each cell type across clusters.
 
 ![Image caption](figures/featureplot-annotation.png){align=center}
+
+### 3. Exercise: Conducting an in-depth immune cell annotation
+
+!!! note "Question"
+
+    Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap?
 
 ## References
 

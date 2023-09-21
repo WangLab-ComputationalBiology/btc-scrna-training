@@ -1,8 +1,12 @@
 # Command-line interface
 
-## Project parameters
+## Pipeline parameters
 
-Reference genome-related files and options required for the workflow.
+| Parameter | Description | Type | Default | 
+|-----------|-----------|-----------|-----------|
+| `workflow_level` | Entrypoint parameter | `string` | Complete |
+
+## Project parameters
 
 | Parameter | Description | Type | Default | 
 |-----------|-----------|-----------|-----------|

@@ -570,6 +570,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-exercise-conducting-an-in-depth-immune-cell-annotation" class="md-nav__link">
+    3. Exercise: Conducting an in-depth immune cell annotation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -854,6 +861,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-exercise-conducting-an-in-depth-immune-cell-annotation" class="md-nav__link">
+    3. Exercise: Conducting an in-depth immune cell annotation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -914,12 +928,21 @@
 <p><strong>Please note:</strong> When setting up the pipeline form make sure the <code>Dataset</code> is configured to <strong>BTC Training dataset</strong> and choose <strong>Run_01</strong> for the <code>Copy Parameters From option</code>. Additionally, set the <code>Entrypoint parameter</code> to <strong>Complete</strong>.</p>
 <h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
 <p>For your reference, the figures we are discussing are located in the <code>Test_annotation_report.html</code> report. You can find this report inside the <strong>Run_02</strong> folder.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The database for <strong>cell markers</strong> is stored in the pipeline repository. You can access it <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv">here</a>. </p>
+</div>
 <h4 id="21-cell-annotation">2.1. Cell annotation<a class="headerlink" href="#21-cell-annotation" title="Permanent link">#</a></h4>
 <p>The <strong>nonMalignant</strong> cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells. </p>
 <p><a class="glightbox" href="../figures/umap-annotation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-annotation.png" /></a></p>
 <h4 id="22-cell-signatures">2.2. Cell signatures<a class="headerlink" href="#22-cell-signatures" title="Permanent link">#</a></h4>
 <p>Furthermore, the pipeline offers a FeaturePlot to examine module score values associated with each cell type across clusters.</p>
 <p><a class="glightbox" href="../figures/featureplot-annotation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/featureplot-annotation.png" /></a></p>
+<h3 id="3-exercise-conducting-an-in-depth-immune-cell-annotation">3. Exercise: Conducting an in-depth immune cell annotation<a class="headerlink" href="#3-exercise-conducting-an-in-depth-immune-cell-annotation" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap?</p>
+</div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
 <ol>
 <li><a href="https://link.springer.com/article/10.1186/s12859-020-03700-5">scTyper: a comprehensive pipeline for the cell typing analysis of single-cell RNA-seq data</a></li>
