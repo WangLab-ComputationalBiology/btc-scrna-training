@@ -909,19 +909,21 @@
 <div class="admonition info">
 <p class="admonition-title">HPC</p>
 <ul>
+<li><code>workflow_level</code>           = Annotation</li>
 <li><code>input_cell_markers_db</code>    = ./assets/cell_markers_database.csv</li>
 <li><code>input_annotation_level</code>   = Major cells</li>
 </ul>
 </div>
-<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
-<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--workflow_level<span class="w"> </span>Annotation<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
 </code></pre></div>
 <h4 id="12-on-cirro">1.2. On Cirro<a class="headerlink" href="#12-on-cirro" title="Permanent link">#</a></h4>
+<p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Cirro</p>
 <ul>
-<li><code>Input cell markers</code>              = Default</li>
-<li><code>Annotation level</code>                = Major cells</li>
+<li><code>Defining the pipeline entrypoint</code>       = Annotation</li>
+<li><code>Input cell markers</code>                     = Default</li>
+<li><code>Annotation level</code>                       = Major cells</li>
 </ul>
 </div>
 <p>Be aware that the <code>input_cell_markers_db</code> parameter permits users to replace the cell annotation database. Alternatively, users can also append additional markers to the CSV file. Kindly refer to the <a href="../advanced/">Advanced</a> config section for a deeper understanding of this process.</p>
@@ -941,7 +943,7 @@
 <h3 id="3-exercise-conducting-an-in-depth-immune-cell-annotation">3. Exercise: Conducting an in-depth immune cell annotation<a class="headerlink" href="#3-exercise-conducting-an-in-depth-immune-cell-annotation" title="Permanent link">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap?</p>
+<p>What would occur if we include CD8T cells in the 'Annotation Level' parameter?</p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
 <ol>
