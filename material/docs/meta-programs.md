@@ -12,13 +12,14 @@ Meta-program analyses are powerful strategies for uncovering intratumor heteroge
 
 !!! info "HPC"
 
+    * `workflow_level`            = Malignant
     * `input_meta_programs_db`    = ./assets/meta_programs_database.csv
     * `input_cell_category`       = Malignant
     * `input_heatmap_annotation`  = source_name;seurat_clusters
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Complete --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run single_cell_basic.nf --workflow_level Malignant --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
@@ -28,6 +29,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 !!! info "Cirro"
 
+    * `Defining the pipeline entrypoints`                           = Malignant
     * `Input meta-program`                                          = Default
     * `Meta-program cell category`                                  = Malignant
     * `Meta-data columns to be displayed on heatmap`                = source_name;seurat_clusters

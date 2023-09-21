@@ -904,18 +904,20 @@
 <div class="admonition info">
 <p class="admonition-title">HPC</p>
 <ul>
+<li><code>workflow_level</code>              = nonMalignant</li>
 <li><code>input_source_groups</code>         = all</li>
 <li><code>input_target_groups</code>         = all</li>
 <li><code>input_cellchat_annotation</code>   = Secreted Signaling</li>
 </ul>
 </div>
-<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--workflow_level<span class="w"> </span>Complete<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--workflow_level<span class="w"> </span>nonMalignant<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
 </code></pre></div>
 <h4 id="12-on-cirro">1.2. On Cirro<a class="headerlink" href="#12-on-cirro" title="Permanent link">#</a></h4>
 <p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Cirro</p>
 <ul>
+<li><code>Defining the pipeline entrypoint</code>    = nonMalignant</li>
 <li><code>Source cell type names</code>              = all</li>
 <li><code>Target cell type names</code>              = all</li>
 <li><code>CellChat interactions type</code>          = Secreted Signaling</li>

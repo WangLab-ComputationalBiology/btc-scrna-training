@@ -16,16 +16,17 @@ By default the previous command line considers thresholds.
 
 !!! info "HPC"
 
-    * `input_integration_method`       = all
-    * `input_target_variables`         = batch
-    * `input_integration_evaluate`     = all
-    * `thr_cell_proportion`            = 0.30
-    * `input_lisi_variables`           = cLISI;iLISI
+    * `Defining the pipeline entrypoint`       = nonMalignant
+    * `input_integration_method`                = all
+    * `input_target_variables`                  = batch
+    * `input_integration_evaluate`              = all
+    * `thr_cell_proportion`                     = 0.30
+    * `input_lisi_variables`                    = cLISI;iLISI
 
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Complete --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run single_cell_basic.nf --workflow_level nonMalignant --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 

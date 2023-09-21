@@ -12,13 +12,14 @@ Cell-cell communication analysis offers insights into the interactions among dif
 
 !!! info "HPC"
 
+    * `workflow_level`              = nonMalignant
     * `input_source_groups`         = all
     * `input_target_groups`         = all
     * `input_cellchat_annotation`   = Secreted Signaling
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Complete --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run single_cell_basic.nf --workflow_level nonMalignant --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
@@ -28,6 +29,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 !!! info "Cirro"
 
+    * `Defining the pipeline entrypoint`    = nonMalignant
     * `Source cell type names`              = all
     * `Target cell type names`              = all
     * `CellChat interactions type`          = Secreted Signaling

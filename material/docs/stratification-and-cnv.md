@@ -16,13 +16,14 @@ By default the previous command line considers thresholds.
 
 !!! info "HPC"
 
-    * `input_stratification_method`   = infercnv_label
-    * `thr_cluster_size`              = 1000
-    * `thr_consensus_score`           = 2
+    * `workflow_level`                          = Stratification
+    * `input_stratification_method`             = infercnv_label
+    * `thr_cluster_size`                        = 1000
+    * `thr_consensus_score`                     = 2
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Complete --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run single_cell_basic.nf --workflow_level Stratification --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
@@ -32,6 +33,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio). Please, be su
 
 !!! info "Cirro"
 
+    * `Defining the pipeline entrypoints`                 = Stratification
     * `Method to define stratification labels`            = infercnv_label
     * `Defining cluster size limit`                       = 1000
     * `Consensus score threshold (Beta)`                  = 2

@@ -18,23 +18,25 @@ To ensure reproducibility, we consolidated markers from various publications int
 
 !!! info "HPC"
 
+    * `workflow_level`           = Annotation
     * `input_cell_markers_db`    = ./assets/cell_markers_database.csv
     * `input_annotation_level`   = Major cells
 
-Alternatively, we execute this task on [Cirro](https://cirro.bio).
-
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run single_cell_basic.nf --workflow_level Annotation --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
 #### 1.2. On Cirro
 
+Alternatively, we execute this task on [Cirro](https://cirro.bio).
+
 !!! info "Cirro"
 
-    * `Input cell markers`              = Default
-    * `Annotation level`                = Major cells
+    * `Defining the pipeline entrypoint`       = Annotation
+    * `Input cell markers`                     = Default
+    * `Annotation level`                       = Major cells
 
 Be aware that the `input_cell_markers_db` parameter permits users to replace the cell annotation database. Alternatively, users can also append additional markers to the CSV file. Kindly refer to the [Advanced](advanced.md) config section for a deeper understanding of this process.
 
@@ -66,7 +68,7 @@ Furthermore, the pipeline offers a FeaturePlot to examine module score values as
 
 !!! note "Question"
 
-    Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap?
+    What would occur if we include CD8T cells in the 'Annotation Level' parameter?
 
 ## References
 

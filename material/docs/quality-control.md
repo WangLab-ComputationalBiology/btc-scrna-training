@@ -27,6 +27,7 @@ By default the previous command line considers thresholds.
 
 !!! info "HPC"
 
+    * `workflow_level`              = Basic
     * `thr_estimate_n_cells`        = 300
     * `thr_mean_reads_per_cells`    = 25000
     * `thr_median_genes_per_cell`   = 900
@@ -48,6 +49,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 !!! info "Cirro"
 
+    * `Defining the pipeline entrypoints`       = Basic
     * `Estimated number of cells`                = 300
     * `Mean reads per cell`                      = 25000
     * `Median genes per cell`                    = 900

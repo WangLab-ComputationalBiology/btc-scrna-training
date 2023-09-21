@@ -18,6 +18,7 @@ By default the previous command line considers thresholds.
 
 !!! info "HPC"
 
+    * `workflow_level`                = Basic
     * `thr_n_features`                = 2000
     * `input_group_plot`              = source_name,Sort
     * `thr_resolution`                = 0.25
@@ -35,6 +36,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 !!! info "Cirro"
 
+    * `Defining the pipeline entrypoint`                        = Basic
     * `Number features for FindVariableFeatures`                = 2000
     * `Meta-data columns for UMAP plot`                         = source_name,Sort
     * `Resolution threshold`                                    = 0.25
