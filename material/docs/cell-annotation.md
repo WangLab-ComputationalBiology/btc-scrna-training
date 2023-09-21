@@ -40,7 +40,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 Be aware that the `input_cell_markers_db` parameter permits users to replace the cell annotation database. Alternatively, users can also append additional markers to the CSV file. Kindly refer to the [Advanced](advanced.md) config section for a deeper understanding of this process.
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Complete**.
+**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Annotation**.
 
 ### 2. Inspecting report
 
@@ -68,7 +68,7 @@ Furthermore, the pipeline offers a FeaturePlot to examine module score values as
 
 !!! note "Question"
 
-    What would occur if we include CD8T cells in the 'Annotation Level' parameter?
+    What would occur if we include **Dendritic Cell Subsets** in the 'Annotation Level' parameter? A: `Run_Dendritic`
 
 ## References
 

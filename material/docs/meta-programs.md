@@ -34,7 +34,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Meta-program cell category`                                  = Malignant
     * `Meta-data columns to be displayed on heatmap`                = source_name;seurat_clusters
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Complete**.
+**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Complete**. *Tip: Accelerate the process by omitting DEG analysis*
 
 ### 2. Inspecting report
 
@@ -62,7 +62,7 @@ Similar to the cell annotation module, we also offer a FeaturePlot panel that re
 
 !!! note "Question"
 
-    Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap?
+    Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap? A: `Run_Meta`
 
 
 ## Reference

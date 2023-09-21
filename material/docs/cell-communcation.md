@@ -34,7 +34,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Target cell type names`              = all
     * `CellChat interactions type`          = Secreted Signaling
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Complete**.
+**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **nonMalignant**. *Tip: Accelerate the process by omitting DEG and Doublets*
 
 ### 2. Inspecting report
 
@@ -62,7 +62,7 @@ Alternatively, we can explore results obtained exclusively from CellChat. The ne
 
 !!! note "Question"
 
-    What happens when switching the interaction type to Cell-Cell Contact?
+    What happens when switching the interaction type to Cell-Cell Contact? A: `Run_Communication`
 
 ## Reference
 

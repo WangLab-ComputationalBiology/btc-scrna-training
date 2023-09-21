@@ -80,7 +80,7 @@ The ROGUE score can also provide insights regarding data quality. For example, s
 
 !!! note "Question"
 
-    What would happen if we changed the features and the resolution threshold?
+    What would happen if we changed the features and the resolution threshold? A: `Run_Dimensionality` and `Run_Clustering`
 
 ---
 

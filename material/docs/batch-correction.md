@@ -42,7 +42,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Cell proportion for Batch evaluation`        = 0.30
     * `Define LISI types for Density plot`          = cLISI;iLISI
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Complete**.
+**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **nonMalignant**. *Tip: Accelerate the process by omitting DEG and Doublets*
 
 ### 2. Inspecting report
 
@@ -76,7 +76,7 @@ LISI plots comprise two components: iLISI and cLISI. iLISI evaluates the mixing 
 
 !!! note "Question"
 
-    How does the batch correction method influence subsequent results? Furthermore, does a change in cell proportion affect the quality metrics?
+    How does the batch correction method influence subsequent results? Furthermore, does a change in cell proportion affect the quality metrics? A: `Run_Harmony` and `Run_Correction_Metrics`
 
 ## Reference
 
