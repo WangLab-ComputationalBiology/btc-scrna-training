@@ -42,9 +42,15 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Cell proportion for Batch evaluation`        = 0.30
     * `Define LISI types for Density plot`          = cLISI;iLISI
 
+On Cirro, users should (**Do not run**):
+
+* Navigate to the Pipelines tab and enter "BTC scRNA Pipeline" in the search engine.
+* Change the `Dataset` to **BTC Training dataset** and the `Copy Parameters From option` to **Run_01**.
+* Double-check the aforementioned parameters and click **Run**.
+
 ### 2. Inspecting report
 
-For your reference, the figures we are discussing are located in the `Test_evaluation_report.html` report. You can find this report inside the **Run_02** folder.
+For convenience the figures can be located in the `Test_evaluation_report.html` report within the **Run_02** dataset.
 
 #### 2.1. Batch evaluation table
 

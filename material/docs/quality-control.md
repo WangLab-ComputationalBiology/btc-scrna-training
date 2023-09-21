@@ -59,17 +59,25 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Percentage of mitochondrial genes`        = 25
     * `Number of observed cells`                 = 300
 
+On Cirro, users should (**Do not run**):
+
+* Navigate to the Pipelines tab and enter "BTC scRNA Pipeline" in the search engine.
+* Change the `Dataset` to **BTC Training dataset** and the `Copy Parameters From option` to **Run_01**.
+* Double-check the aforementioned parameters and click **Run**.
+
 ### 2. Inspecting report
 
-A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample.
-
-For your reference, the figures we are discussing are located in the `Test_project_metric_report.html` report. You can find this report inside the **Run_02** folder.
+A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample. For convenience the figures can be located in the `Test_project_metric_report.html` report within the **Run_02** dataset.
 
 ![Image caption](figures/report-table.png){align=center}
 
-The QC table displays metrics related to multiple samples, along with a QC label indicating the status of each sample (SUCCESS, FIXABLE, or FAILURE). The filtering system was developed with a focus on traceability, allowing users to inspect which metrics do not meet expectations and make necessary adjustments. Additionally, it enables users to determine whether the samples are failing at the library preparation stage or due to cell-level quality issues.
+The QC table displays metrics related to multiple samples, along with a QC label indicating the status of each sample (SUCCESS, FIXABLE, or FAILURE). The filtering system was developed with a focus on traceability, allowing users to inspect which metrics do not meet expectations and make necessary adjustments. Additionally, it enables users to determine whether the samples are failing at the library preparation stage or due to cell-level quality issues (see below).
+
+![Image caption](figures/flowchart_qc.png){align=center}
 
 ### 3. Exercise: Adjusting filterings
+
+#### 3.1. On HPC
 
 Now that we have assessed the quality control reports, we will proceed with the analysis by adjusting the threshold. In this case, we will be more permissive to include the **SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY** sample. To achieve this, we will change the `thr_n_observed_cells` to 250 cells after filtering mitochondrial RNA percentage. Please note that this adjustment will be applied specifically to this subset, which contains only a fraction of cells per sample.
 
@@ -82,6 +90,8 @@ nextflow run single_cell_basic.nf --project_name Training --sample_csv sample_ta
 !!! tip
 
     The Nextflow caching system ensures that the alignment step is not rerun. As a result, only the QC filtering will be executed, along with the generation of the new project report.
+
+#### 3.2. On Cirro
 
 **Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_02** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Basic**.
 
