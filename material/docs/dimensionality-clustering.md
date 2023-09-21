@@ -19,7 +19,6 @@ By default the previous command line considers thresholds.
 !!! info "HPC"
 
     * `thr_n_features`                = 2000
-    * `input_integration_dimension`   = auto
     * `input_group_plot`              = source_name,Sort
     * `thr_resolution`                = 0.25
     * `thr_proportion`                = 0.25
@@ -37,7 +36,6 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 !!! info "Cirro"
 
     * `Number features for FindVariableFeatures`                = 2000
-    * `Embeddings for Louvain clustering`                       = auto
     * `Meta-data columns for UMAP plot`                         = source_name,Sort
     * `Resolution threshold`                                    = 0.25
     * `Cell proportion for ROGUE calculation`                   = 0.25
