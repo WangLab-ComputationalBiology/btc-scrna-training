@@ -83,7 +83,7 @@ Alternatively, users can substitute it with a version of their choice, but certa
 Genomes/Homo_sapiens/ANNOTATION/GENOME_VERSION/
 ```
 
-The terms **ANNOTATION** and **GENOME_VERSION** should be replaced with the user's preferred choices. Next, the user will need to replace edit a few lines on `conf/igenomes.config` within `btc-scrna-pipeline` folder. 
+The terms **ANNOTATION** and **GENOME_VERSION** should be replaced with the user's preferred choices. Next, the user will need to edit a few lines on `conf/igenomes.config` within `btc-scrna-pipeline` folder. 
 
 ```
 params {
