@@ -303,23 +303,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-adding-gene-signatures-and-meta-programs" class="md-nav__link">
-    2. Adding gene signatures and meta-programs
+  <a href="#2-pipeline-entrypoints" class="md-nav__link">
+    2. Pipeline entrypoints
   </a>
   
-    <nav class="md-nav" aria-label="2. Adding gene signatures and meta-programs">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-adding-gene-signatures-and-meta-programs" class="md-nav__link">
+    3. Adding gene signatures and meta-programs
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Adding gene signatures and meta-programs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-cell-markers" class="md-nav__link">
-    2.1. Cell Markers
+  <a href="#31-cell-markers" class="md-nav__link">
+    3.1. Cell Markers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#21-meta-programs" class="md-nav__link">
-    2.1. Meta-programs
+  <a href="#32-meta-programs" class="md-nav__link">
+    3.2. Meta-programs
   </a>
   
 </li>
@@ -330,8 +337,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-adding-custom-genomes-on-the-pipeline-cellranger-alignment" class="md-nav__link">
-    3. Adding custom genomes on the pipeline (Cellranger alignment).
+  <a href="#4-adding-custom-genomes-on-the-pipeline-cellranger-alignment" class="md-nav__link">
+    4. Adding custom genomes on the pipeline (Cellranger alignment).
   </a>
   
 </li>
@@ -793,23 +800,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-adding-gene-signatures-and-meta-programs" class="md-nav__link">
-    2. Adding gene signatures and meta-programs
+  <a href="#2-pipeline-entrypoints" class="md-nav__link">
+    2. Pipeline entrypoints
   </a>
   
-    <nav class="md-nav" aria-label="2. Adding gene signatures and meta-programs">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-adding-gene-signatures-and-meta-programs" class="md-nav__link">
+    3. Adding gene signatures and meta-programs
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Adding gene signatures and meta-programs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-cell-markers" class="md-nav__link">
-    2.1. Cell Markers
+  <a href="#31-cell-markers" class="md-nav__link">
+    3.1. Cell Markers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#21-meta-programs" class="md-nav__link">
-    2.1. Meta-programs
+  <a href="#32-meta-programs" class="md-nav__link">
+    3.2. Meta-programs
   </a>
   
 </li>
@@ -820,8 +834,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-adding-custom-genomes-on-the-pipeline-cellranger-alignment" class="md-nav__link">
-    3. Adding custom genomes on the pipeline (Cellranger alignment).
+  <a href="#4-adding-custom-genomes-on-the-pipeline-cellranger-alignment" class="md-nav__link">
+    4. Adding custom genomes on the pipeline (Cellranger alignment).
   </a>
   
 </li>
@@ -874,13 +888,16 @@
 </code></pre></div>
 <p>The previous snippet creates a profile for a institution powered by SLURM. It includes several settings, such as loading modules like <code>singularity/3.7.0</code>, and specifying the job scheduling engine with the <code>executor</code> property. Nextflow works with many engines; for more details, refer to the official <a href="https://nf-co.re/docs/usage/tutorials/step_by_step_institutional_profile">documentation</a>. Please note that the <code>process</code> scope should match the HPC specs, i.e., queue, memory and cpus.</p>
 <h4 id="12-container-and-nextflow-pipelines">1.2. Container and Nextflow pipelines<a class="headerlink" href="#12-container-and-nextflow-pipelines" title="Permanent link">#</a></h4>
-<p>Note that Nextflow pipelines are integrated with containers to guarantee reproducibility and portability. This integration ensures that during the pipeline execution, each module is encapsulated within a predefined computational environment, encompassing all necessary software, libraries, and programming languages. As a result, researchers can be confident that their workflows will produce consistent results across different platforms and that these workflows can be easily shared and executed by collaborators in diverse computing environments.</p>
-<p><a class="glightbox" href="../figures/schema-geniac-container.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/schema-geniac-container.gif" /></a></p>
-<p><strong>Figure from <a href="https://open-research-europe.ec.europa.eu/articles/1-76">Geniac</a></strong></p>
+<p>Why use Singularity/Docker? It's important to note that Nextflow pipelines integrate with containers to ensure reproducibility and portability. This integration guarantees that, during pipeline execution, each module operates within a predefined computational environment, which includes all required software, libraries, and programming languages. Consequently, researchers can trust that their workflows will yield consistent results across various platforms. Additionally, these workflows can be effortlessly shared and run by collaborators in different computing environments.</p>
+<p><a class="glightbox" href="../figures/schema-container.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/schema-container.png" /></a></p>
 <hr />
-<h3 id="2-adding-gene-signatures-and-meta-programs">2. Adding gene signatures and meta-programs<a class="headerlink" href="#2-adding-gene-signatures-and-meta-programs" title="Permanent link">#</a></h3>
-<p>The pipeline allows flexibility regarding cell or meta-program markers. Currently, we provide two databases with curated cell markers <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv">1</a> and meta-programs <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/meta_programs_database.csv">2</a>.</p>
-<h4 id="21-cell-markers">2.1. Cell Markers<a class="headerlink" href="#21-cell-markers" title="Permanent link">#</a></h4>
+<h3 id="2-pipeline-entrypoints">2. Pipeline entrypoints<a class="headerlink" href="#2-pipeline-entrypoints" title="Permanent link">#</a></h3>
+<p>This pipeline was designed with multiple entry points in mind. It is still a work in progress, but the pipeline already offers ways to skip a few modules (processes) and entire routines (sub-workflows). The entry points are named based on major functions: Basic, Stratification, Annotation, nonMalignant, and Malignant. Details are provided below.</p>
+<p><a class="glightbox" href="../figures/schema-pipeline-entrypoint.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/schema-pipeline-entrypoint.png" /></a></p>
+<hr />
+<h3 id="3-adding-gene-signatures-and-meta-programs">3. Adding gene signatures and meta-programs<a class="headerlink" href="#3-adding-gene-signatures-and-meta-programs" title="Permanent link">#</a></h3>
+<p>The pipeline allows flexibility regarding cell or meta-program markers. Currently, we provide two databases with curated cell markers <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv">[1]</a> and meta-programs <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/meta_programs_database.csv">[2]</a>.</p>
+<h4 id="31-cell-markers">3.1. Cell Markers<a class="headerlink" href="#31-cell-markers" title="Permanent link">#</a></h4>
 <p>To customize the cell markers database, it's essential to adhere to pipeline conventions. Firstly, the table should consist of four columns, as detailed below. Most importantly, the cell type column will determine the annotation level at which the pipeline will operate.</p>
 <table>
 <thead>
@@ -952,7 +969,7 @@
 <p class="admonition-title">Tip</p>
 <p>Note that each marker (gene) is presented in a single row. This long format aligns with best practices for data analysis.</p>
 </div>
-<h4 id="21-meta-programs">2.1. Meta-programs<a class="headerlink" href="#21-meta-programs" title="Permanent link">#</a></h4>
+<h4 id="32-meta-programs">3.2. Meta-programs<a class="headerlink" href="#32-meta-programs" title="Permanent link">#</a></h4>
 <p>Similar to customizing cell markers, users will need to adhere to pre-established standards. The <code>source</code> column will serve as the anchor that the pipeline uses to subset the meta-programs database.</p>
 <table>
 <thead>
@@ -1016,7 +1033,7 @@
 </tbody>
 </table>
 <hr />
-<h3 id="3-adding-custom-genomes-on-the-pipeline-cellranger-alignment">3. Adding custom genomes on the pipeline (Cellranger alignment).<a class="headerlink" href="#3-adding-custom-genomes-on-the-pipeline-cellranger-alignment" title="Permanent link">#</a></h3>
+<h3 id="4-adding-custom-genomes-on-the-pipeline-cellranger-alignment">4. Adding custom genomes on the pipeline (Cellranger alignment).<a class="headerlink" href="#4-adding-custom-genomes-on-the-pipeline-cellranger-alignment" title="Permanent link">#</a></h3>
 <p>The pipeline employs Cellranger for alignment. We set up the reference genome based on Gencode (v46) and GRCH38. To achieve this, we adhered to the tutorial provided in the 10x Genomics <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/release-notes/build#grch38_%23%7Bfiles.refdata_GRCh38.version%7D">documentation</a>. </p>
 <p>Alternatively, users can substitute it with a version of their choice, but certain conventions must be observed. The <strong>mkref</strong> output should be stored in a folder that adheres to the following structure: </p>
 <div class="highlight"><pre><span></span><code>Genomes/Homo_sapiens/ANNOTATION/GENOME_VERSION/
