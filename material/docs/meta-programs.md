@@ -34,8 +34,6 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Meta-program cell category`                                  = Malignant
     * `Meta-data columns to be displayed on heatmap`                = source_name;seurat_clusters
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Malignant**.
-
 ### 2. Inspecting report
 
 For your reference, the figures we are discussing are located in the `Test_Malignant_meta_report.html` report. You can find this report inside the **Run_02** folder.
@@ -43,8 +41,6 @@ For your reference, the figures we are discussing are located in the `Test_Malig
 !!! info
 
     The database for **meta-programs** is stored in the pipeline repository. You can access it [here](https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv). 
-
-
 
 #### 2.1. Meta-program and ITH prediction
 
@@ -64,7 +60,9 @@ Similar to the cell annotation module, we also offer a FeaturePlot panel that re
 
     Considering meta-data for this dataset, is it possible to add or remove annotations on the heatmap? A: `Run_Meta`
 
-*Tip: Accelerate the process by omitting DEG analysis*
+**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_02** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Malignant**.
+
+*Tip: Accelerate the process by skipping DEG analysis*
 
 ## Reference
 

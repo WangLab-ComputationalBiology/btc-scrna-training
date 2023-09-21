@@ -42,8 +42,6 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Resolution threshold`                                    = 0.25
     * `Cell proportion for ROGUE calculation`                   = 0.25
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Basic**.
-
 ### 2. Inspecting report
 
 For your reference, the figures we are discussing are located in the `Test_merged_report.html` and `Test_main_cluster_report.html` reports. You can find this report inside the **Run_02** folder.
@@ -81,6 +79,8 @@ The ROGUE score can also provide insights regarding data quality. For example, s
 !!! note "Question"
 
     What would happen if we changed the features and the resolution threshold? A: `Run_Dimensionality` and `Run_Clustering`
+
+**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_01** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Basic**.
 
 ---
 

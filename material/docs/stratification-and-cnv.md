@@ -38,8 +38,6 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio). Please, be su
     * `Defining cluster size limit`                       = 1000
     * `Consensus score threshold (Beta)`                  = 2
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Stratification**.
-
 ### 2. Inspecting report
 
 For your reference, the figures we are discussing are located in the `Test_stratification_report.html` report. You can find this report inside the **Run_02** folder.
@@ -75,6 +73,8 @@ The malignancy prediction can generally be correlated with CD45 status (protein-
 !!! note "Question"
 
     Does the consensus method affect the meta-program analysis? What happens if we change the consensus threshold? A: `Run_Consensus` and `Run_Consensus_Meta_Threshold`
+
+**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_02** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Stratification**.
 
 *Tip: Accelerate the process by reducing cluster size limit to 100*
 
