@@ -488,6 +488,26 @@
     3. Exercise: Adjusting filterings
   </a>
   
+    <nav class="md-nav" aria-label="3. Exercise: Adjusting filterings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-on-hpc" class="md-nav__link">
+    3.1. On HPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-on-cirro" class="md-nav__link">
+    3.2. On Cirro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -852,6 +872,26 @@
     3. Exercise: Adjusting filterings
   </a>
   
+    <nav class="md-nav" aria-label="3. Exercise: Adjusting filterings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-on-hpc" class="md-nav__link">
+    3.1. On HPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-on-cirro" class="md-nav__link">
+    3.2. On Cirro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -931,12 +971,19 @@
 <li><code>Number of observed cells</code>                 = 300</li>
 </ul>
 </div>
+<p>On Cirro, users should (<strong>Do not run</strong>):</p>
+<ul>
+<li>Navigate to the Pipelines tab and enter "BTC scRNA Pipeline" in the search engine.</li>
+<li>Change the <code>Dataset</code> to <strong>BTC Training dataset</strong> and the <code>Copy Parameters From option</code> to <strong>Run_01</strong>.</li>
+<li>Double-check the aforementioned parameters and click <strong>Run</strong>.</li>
+</ul>
 <h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
-<p>A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample.</p>
-<p>For your reference, the figures we are discussing are located in the <code>Test_project_metric_report.html</code> report. You can find this report inside the <strong>Run_02</strong> folder.</p>
+<p>A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample. For convenience the figures can be located in the <code>Test_project_metric_report.html</code> report within the <strong>Run_02</strong> dataset.</p>
 <p><a class="glightbox" href="../figures/report-table.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/report-table.png" /></a></p>
-<p>The QC table displays metrics related to multiple samples, along with a QC label indicating the status of each sample (SUCCESS, FIXABLE, or FAILURE). The filtering system was developed with a focus on traceability, allowing users to inspect which metrics do not meet expectations and make necessary adjustments. Additionally, it enables users to determine whether the samples are failing at the library preparation stage or due to cell-level quality issues.</p>
+<p>The QC table displays metrics related to multiple samples, along with a QC label indicating the status of each sample (SUCCESS, FIXABLE, or FAILURE). The filtering system was developed with a focus on traceability, allowing users to inspect which metrics do not meet expectations and make necessary adjustments. Additionally, it enables users to determine whether the samples are failing at the library preparation stage or due to cell-level quality issues (see below).</p>
+<p><a class="glightbox" href="../figures/flowchart_qc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/flowchart_qc.png" /></a></p>
 <h3 id="3-exercise-adjusting-filterings">3. Exercise: Adjusting filterings<a class="headerlink" href="#3-exercise-adjusting-filterings" title="Permanent link">#</a></h3>
+<h4 id="31-on-hpc">3.1. On HPC<a class="headerlink" href="#31-on-hpc" title="Permanent link">#</a></h4>
 <p>Now that we have assessed the quality control reports, we will proceed with the analysis by adjusting the threshold. In this case, we will be more permissive to include the <strong>SPECTRUM-OV-065_S1_CD45P_RIGHT_OVARY</strong> sample. To achieve this, we will change the <code>thr_n_observed_cells</code> to 250 cells after filtering mitochondrial RNA percentage. Please note that this adjustment will be applied specifically to this subset, which contains only a fraction of cells per sample.</p>
 <div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>--thr_n_observed_cells<span class="w"> </span><span class="m">250</span><span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
 </code></pre></div>
@@ -944,6 +991,7 @@
 <p class="admonition-title">Tip</p>
 <p>The Nextflow caching system ensures that the alignment step is not rerun. As a result, only the QC filtering will be executed, along with the generation of the new project report.</p>
 </div>
+<h4 id="32-on-cirro">3.2. On Cirro<a class="headerlink" href="#32-on-cirro" title="Permanent link">#</a></h4>
 <p><strong>Please note:</strong> When configuring the pipeline on Cirro, ensure that the <code>Dataset</code> is set to <strong>BTC Training dataset</strong> and select <strong>Run_02</strong> for the <code>Copy Parameters From option</code>. Additionally, configure the <code>Entrypoint parameter</code> to <strong>Basic</strong>.</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
 <ol>
