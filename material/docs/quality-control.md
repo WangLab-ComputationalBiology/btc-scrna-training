@@ -49,7 +49,7 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
 
 !!! info "Cirro"
 
-    * `Defining the pipeline entrypoints`       = Basic
+    * `Defining the pipeline entrypoint`         = Basic
     * `Estimated number of cells`                = 300
     * `Mean reads per cell`                      = 25000
     * `Median genes per cell`                    = 900
