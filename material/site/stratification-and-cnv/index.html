@@ -939,7 +939,7 @@
 <li><code>Consensus score threshold (Beta)</code>                  = 2</li>
 </ul>
 </div>
-<p><strong>Please note:</strong> When setting up the pipeline form make sure the <code>Dataset</code> is configured to <strong>BTC Training dataset</strong> and choose <strong>Run_01</strong> for the <code>Copy Parameters From option</code>. Additionally, set the <code>Entrypoint parameter</code> to <strong>Complete</strong>.</p>
+<p><strong>Please note:</strong> When setting up the pipeline form make sure the <code>Dataset</code> is configured to <strong>BTC Training dataset</strong> and choose <strong>Run_01</strong> for the <code>Copy Parameters From option</code>. Additionally, set the <code>Entrypoint parameter</code> to <strong>Stratification</strong>.</p>
 <h3 id="2-inspecting-report">2. Inspecting report<a class="headerlink" href="#2-inspecting-report" title="Permanent link">#</a></h3>
 <p>For your reference, the figures we are discussing are located in the <code>Test_stratification_report.html</code> report. You can find this report inside the <strong>Run_02</strong> folder.</p>
 <h4 id="21-infercnv-predictions">2.1. InferCNV predictions<a class="headerlink" href="#21-infercnv-predictions" title="Permanent link">#</a></h4>
@@ -962,8 +962,9 @@
 <h3 id="3-exercise-exploring-alternative-approaches-to-perform-malignant-identification">3. Exercise: Exploring alternative approaches to perform malignant identification<a class="headerlink" href="#3-exercise-exploring-alternative-approaches-to-perform-malignant-identification" title="Permanent link">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>Does the consensus method affect the meta-program analysis? A: <code>Run_Consensus_Meta</code></p>
+<p>Does the consensus method affect the meta-program analysis? What happens if we change the consensus threshold? A: <code>Run_Consensus</code> and <code>Run_Consensus_Meta_Threshold</code></p>
 </div>
+<p><em>Tip: Accelerate the process by reducing cluster size limit to 100</em></p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
 <ol>
 <li><a href="https://bioconductor.org/packages/release/bioc/html/infercnv.html">Infer Copy Number Variation from Single-Cell RNA-Seq Data</a></li>

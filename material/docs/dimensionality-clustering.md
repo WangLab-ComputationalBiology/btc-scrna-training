@@ -42,11 +42,11 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Resolution threshold`                                    = 0.25
     * `Cell proportion for ROGUE calculation`                   = 0.25
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_02** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Basic**.
+**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Basic**.
 
 ### 2. Inspecting report
 
-For your reference, the figures we are discussing are located in the `Test_merged_report.html` and `Test_main_cluster_report.html` reports. You can find this report inside the **Run_01** folder.
+For your reference, the figures we are discussing are located in the `Test_merged_report.html` and `Test_main_cluster_report.html` reports. You can find this report inside the **Run_02** folder.
 
 #### 2.1. Highly variable genes (HVG)
 

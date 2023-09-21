@@ -59,13 +59,13 @@ Alternatively, we execute this task on [Cirro](https://cirro.bio).
     * `Percentage of mitochondrial genes`        = 25
     * `Number of observed cells`                 = 300
 
-**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_02** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Basic**.
+**Please note:** When setting up the pipeline form make sure the `Dataset` is configured to **BTC Training dataset** and choose **Run_01** for the `Copy Parameters From option`. Additionally, set the `Entrypoint parameter` to **Basic**.
 
 ### 2. Inspecting report
 
 A fundamental component in the pipeline is related to its HTML reports generation. Over the tutorials, we will browse several HTML reports and discuss key features in each analysis. The first report, "Rendering QC report", produces an interactive table reporting estimates and observed metrics for each sample.
 
-For your reference, the figures we are discussing are located in the `Test_project_metric_report.html` report. You can find this report inside the **Run_01** folder.
+For your reference, the figures we are discussing are located in the `Test_project_metric_report.html` report. You can find this report inside the **Run_02** folder.
 
 ![Image caption](figures/report-table.png){align=center}
 

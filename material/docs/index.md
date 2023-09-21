@@ -10,6 +10,12 @@ Nextflow can be used on any POSIX-compatible system (Linux, OS X, WSL). It requi
 wget -qO- https://get.nextflow.io | bash
 ```
 
+**After it, we need to do two easy steps:**
+
+* Make the binary executable on your system by running `chmod +x` nextflow.
+
+* Optionally, move the nextflow file to a directory accessible by your $PATH variable (this is only required to avoid remembering and typing the full path to nextflow each time you need to run it).
+
 ### 2. Containerization
 
 In line with contemporary pipelines, the BTC scRNA pipeline is powered by multiple Docker containers. On that note, distinct computational environments will depend on distinct container technologies, such as Docker (v20.10.22) and Singularity (v3.7.0). For instance, HPC strongly depend on Singularity, therefore it should be explicitly defined into `profile` configurations. For a better understanding, refer to the [advanced](advanced.md) section. Additionally, check the [containers](https://github.com/break-through-cancer/btc-sc-containers) repository.

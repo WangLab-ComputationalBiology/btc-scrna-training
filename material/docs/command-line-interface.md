@@ -7,6 +7,7 @@
 | `workflow_level` | Defining the pipeline entrypoint | `string` | Complete |
 | `skip_deg` | Skipping Differential expression analysis | `boolean` | false |
 | `skip_com` | Skipping Cell-cell communication analysis | `boolean` | false |
+| `skip_dbl` | Skipping Doublet detection analysis | `boolean` | false |
 
 ## Project parameters
 
