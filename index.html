@@ -887,6 +887,15 @@
 <p>Nextflow can be used on any POSIX-compatible system (Linux, OS X, WSL). It requires Bash 3.2 (or later) and Java 11 (or later, up to 18) to be installed.</p>
 <div class="copy highlight"><pre><span></span><code>wget<span class="w"> </span>-qO-<span class="w"> </span>https://get.nextflow.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
+<p><strong>After it, we need to do two easy steps:</strong></p>
+<ul>
+<li>
+<p>Make the binary executable on your system by running <code>chmod +x</code> nextflow.</p>
+</li>
+<li>
+<p>Optionally, move the nextflow file to a directory accessible by your $PATH variable (this is only required to avoid remembering and typing the full path to nextflow each time you need to run it).</p>
+</li>
+</ul>
 <h3 id="2-containerization">2. Containerization<a class="headerlink" href="#2-containerization" title="Permanent link">#</a></h3>
 <p>In line with contemporary pipelines, the BTC scRNA pipeline is powered by multiple Docker containers. On that note, distinct computational environments will depend on distinct container technologies, such as Docker (v20.10.22) and Singularity (v3.7.0). For instance, HPC strongly depend on Singularity, therefore it should be explicitly defined into <code>profile</code> configurations. For a better understanding, refer to the <a href="advanced/">advanced</a> section. Additionally, check the <a href="https://github.com/break-through-cancer/btc-sc-containers">containers</a> repository.</p>
 <h3 id="3-cloning-scrna-seq-pipeline">3. Cloning scRNA-Seq Pipeline<a class="headerlink" href="#3-cloning-scrna-seq-pipeline" title="Permanent link">#</a></h3>
