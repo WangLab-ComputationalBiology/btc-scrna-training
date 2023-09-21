@@ -62,7 +62,7 @@ Alternatively, we can explore results obtained exclusively from CellChat. The ne
 
     What happens when switching the interaction type to Cell-Cell Contact? A: `Run_Cell_Contact`
 
-**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_01** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **nonMalignant**.
+**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_02** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **nonMalignant**.
 
 *Tip: Accelerate the process by skipping DEG and Doublets analyses*
 

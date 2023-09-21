@@ -80,7 +80,7 @@ The ROGUE score can also provide insights regarding data quality. For example, s
 
     What would happen if we changed the features and the resolution threshold? A: `Run_Dimensionality` and `Run_Clustering`
 
-**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_01** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Basic**.
+**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_02** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Basic**.
 
 ---
 

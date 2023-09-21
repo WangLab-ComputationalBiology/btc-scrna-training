@@ -68,7 +68,7 @@ Furthermore, the pipeline offers a FeaturePlot to examine module score values as
 
     What would occur if we include **Dendritic Cell Subsets** in the 'Annotation Level' parameter? A: `Run_Dendritic`
 
-**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_01** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Annotation**.
+**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_02** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **Annotation**.
 
 ## References
 

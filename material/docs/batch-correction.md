@@ -76,7 +76,7 @@ LISI plots comprise two components: iLISI and cLISI. iLISI evaluates the mixing 
 
     How does the batch correction method influence subsequent results? Furthermore, does a change in cell proportion affect the quality metrics? A: `Run_Harmony` and `Run_Harmony_Metrics`
 
-**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_01** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **nonMalignant**.
+**Please note:** When configuring the pipeline on Cirro, ensure that the `Dataset` is set to **BTC Training dataset** and select **Run_02** for the `Copy Parameters From option`. Additionally, configure the `Entrypoint parameter` to **nonMalignant**.
 
 *Tip: Accelerate the process by skipping DEG and Doublets analyses*
 
