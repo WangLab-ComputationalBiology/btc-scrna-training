@@ -72,7 +72,7 @@ Alternatively, we also offer annotations based on the consensus approach (**unde
 
 ![Image caption](figures/umap-cd45.png){align=center}
 
-The malignancy prediction can generally be correlated with CD45 status (protein-level expression). However, minor discrepancies might be linked to the presence of **normal** epithelial cells in the dataset.
+The malignancy prediction can generally be correlated with CD45 status (protein-level expression). However, minor discrepancies might be linked to the presence of **normal** cells with CD45- status in the dataset.
 
 ### 3. Exercise: Exploring alternative approaches to perform malignant identification
 
