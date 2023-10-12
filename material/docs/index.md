@@ -23,8 +23,9 @@ In line with contemporary pipelines, the BTC scRNA pipeline is powered by multip
 ### 3. Cloning scRNA-Seq Pipeline
 
 ```{ .bash .copy }
-git clone https://github.com/WangLab-ComputationalBiology/btc-scrna-pipeline
+git clone --recurse-submodules https://github.com/WangLab-ComputationalBiology/btc-scrna-pipeline
 ```
+
 ### 4. Running single-cell pipeline
 
 The pipeline requires four parameters: `project name`, `sample_table`, `meta_data`, `cancer_type`. In particular, sample_table and meta_data should follow a **mandatory** format as described below.
