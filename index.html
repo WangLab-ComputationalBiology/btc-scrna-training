@@ -899,7 +899,7 @@
 <h3 id="2-containerization">2. Containerization<a class="headerlink" href="#2-containerization" title="Permanent link">#</a></h3>
 <p>In line with contemporary pipelines, the BTC scRNA pipeline is powered by multiple Docker containers. On that note, distinct computational environments depend on container technologies, such as Docker (v20.10.22) and Singularity (v3.7.0). For instance, HPC strongly depend on Singularity, therefore it should be explicitly defined into <code>profile</code> configurations. For a better understanding, refer to the <a href="advanced/">advanced</a> section. Additionally, check the <a href="https://github.com/break-through-cancer/btc-sc-containers">containers</a> repository.</p>
 <h3 id="3-cloning-scrna-seq-pipeline">3. Cloning scRNA-Seq Pipeline<a class="headerlink" href="#3-cloning-scrna-seq-pipeline" title="Permanent link">#</a></h3>
-<div class="copy highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/WangLab-ComputationalBiology/btc-scrna-pipeline
+<div class="copy highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/WangLab-ComputationalBiology/btc-scrna-pipeline
 </code></pre></div>
 <h3 id="4-running-single-cell-pipeline">4. Running single-cell pipeline<a class="headerlink" href="#4-running-single-cell-pipeline" title="Permanent link">#</a></h3>
 <p>The pipeline requires four parameters: <code>project name</code>, <code>sample_table</code>, <code>meta_data</code>, <code>cancer_type</code>. In particular, sample_table and meta_data should follow a <strong>mandatory</strong> format as described below.</p>
