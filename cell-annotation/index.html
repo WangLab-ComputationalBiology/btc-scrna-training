@@ -914,7 +914,7 @@
 <li><code>input_annotation_level</code>   = Major cells</li>
 </ul>
 </div>
-<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--workflow_level<span class="w"> </span>Annotation<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>--workflow_level<span class="w"> </span>Annotation<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
 </code></pre></div>
 <h4 id="12-on-cirro">1.2. On Cirro<a class="headerlink" href="#12-on-cirro" title="Permanent link">#</a></h4>
 <p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>
@@ -937,10 +937,10 @@
 <p>For convenience the figures can be located in the <code>Test_annotation_report.html</code> report within the <strong>Run_02</strong> dataset.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The database for <strong>cell markers</strong> is stored in the pipeline repository. You can access it <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv">here</a>. </p>
+<p>The database for <strong>cell markers</strong> is stored in the pipeline repository. You can access it <a href="https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv">here</a>.</p>
 </div>
 <h4 id="21-cell-annotation">2.1. Cell annotation<a class="headerlink" href="#21-cell-annotation" title="Permanent link">#</a></h4>
-<p>The <strong>nonMalignant</strong> cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells. </p>
+<p>The <strong>nonMalignant</strong> cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells.</p>
 <p><a class="glightbox" href="../figures/umap-annotation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="center" alt="Image caption" src="../figures/umap-annotation.png" /></a></p>
 <h4 id="22-cell-signatures">2.2. Cell signatures<a class="headerlink" href="#22-cell-signatures" title="Permanent link">#</a></h4>
 <p>Furthermore, the pipeline offers a FeaturePlot to examine module score values associated with each cell type across clusters.</p>
