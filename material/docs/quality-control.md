@@ -39,7 +39,7 @@ By default the previous command line considers thresholds.
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Basic --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run main.nf --workflow_level Basic --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
@@ -83,7 +83,7 @@ Now that we have assessed the quality control reports, we will proceed with the 
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian --thr_n_observed_cells 250 -resume -profile seadragon
+nextflow run main.nf --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian --thr_n_observed_cells 250 -resume -profile seadragon
 
 ```
 

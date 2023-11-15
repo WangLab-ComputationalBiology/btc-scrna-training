@@ -10,7 +10,7 @@ In this hands-on section, we will cover several analytical steps. Initially, the
 
 ### 1. Running pipeline
 
-Currently, the pipeline permits users to modify several parameters, encompassing crucial thresholds like the number of highly variable genes and clustering resolution. Please, see the list below. 
+Currently, the pipeline permits users to modify several parameters, encompassing crucial thresholds like the number of highly variable genes and clustering resolution. Please, see the list below.
 
 #### 1.1. On the HPC
 
@@ -26,7 +26,7 @@ By default the previous command line considers thresholds.
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Basic --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run main.nf --workflow_level Basic --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 

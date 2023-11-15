@@ -20,6 +20,11 @@ wget -qO- https://get.nextflow.io | bash
 
 In line with contemporary pipelines, the BTC scRNA pipeline is powered by multiple Docker containers. On that note, distinct computational environments depend on container technologies, such as Docker (v20.10.22) and Singularity (v3.7.0). For instance, HPC strongly depend on Singularity, therefore it should be explicitly defined into `profile` configurations. For a better understanding, refer to the [advanced](advanced.md) section. Additionally, check the [containers](https://github.com/break-through-cancer/btc-sc-containers) repository.
 
+!!! warn
+
+    Please, note that Docker/Singularity images will be automatically download by the pipeline.
+
+
 ### 3. Cloning scRNA-Seq Pipeline
 
 ```{ .bash .copy }
@@ -49,7 +54,7 @@ The metadata file, in `.csv` format, should include columns pertinent to the exp
 To execute the pipeline, users should use the command line structure outlined below. **Please**, note the semantic differences between using one dash (-) for Nextflow commands and two dashes (--) for pipeline commands. Commands with two dashes are reserved for specific pipeline tasks, like adjusting filtering or thresholds on the single-cell analysis.
 
 ```{ .bash .copy }
-nextflow run single_cell_basic.nf --project_name <PROJECT> --sample_csv <path/to/sample_table.csv> --meta_data <path/to/meta_data.csv> --cancer_type <CANCER TYPE> -resume -profile <PROFILE>
+nextflow run main.nf --project_name <PROJECT> --sample_csv <path/to/sample_table.csv> --meta_data <path/to/meta_data.csv> --cancer_type <CANCER TYPE> -resume -profile <PROFILE>
 ```
 Ultimately, the pipeline will make a folder named after the `--project_name` command. This folder contain all the results. The `-resume` command leverages Nextflow caching, i.e., resuming executions to avoid **excessive** computational time.
 
@@ -58,7 +63,7 @@ Ultimately, the pipeline will make a folder named after the `--project_name` com
 The pipeline requires staging (downloading) multiple components to operate. This can pose challenges in HPC environments with strict network policies. As a workaround, consider using the `-stub` option on a node with a network connection. The `-stub` will stage all the necessary components without actually executing any analysis. Thus, it serves as a bootstrap run for the pipeline. Please note that **stub** will generate dummy outputs.
 
 ```{ .bash .copy }
-nextflow run single_cell_basic.nf --project_name <PROJECT> --sample_csv <path/to/sample_table.csv> --meta_data <path/to/meta_data.csv> --cancer_type <CANCER TYPE> -resume -profile <PROFILE> -stub
+nextflow run main.nf --project_name <PROJECT> --sample_csv <path/to/sample_table.csv> --meta_data <path/to/meta_data.csv> --cancer_type <CANCER TYPE> -resume -profile <PROFILE> -stub
 ```
 #### 4.4. Shorten command-line
 
@@ -77,7 +82,7 @@ Long command lines can be tricky. Thankfully, with Nextflow's `-params-file`, we
 Note, other paramaters can be added into the `-params-file`. For your convenience, please check the command-line [documentation](command-line-interface.md).
 
 ```{ .bash .copy }
-nextflow run single_cell_basic.nf -params-file <PARAMS.json> -resume -profile <PROFILE>
+nextflow run main.nf -params-file <PARAMS.json> -resume -profile <PROFILE>
 ```
 
 ### 5. Expect outputs

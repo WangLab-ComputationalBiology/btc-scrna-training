@@ -24,7 +24,7 @@ To ensure reproducibility, we consolidated markers from various publications int
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Annotation --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run main.nf --workflow_level Annotation --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
@@ -52,12 +52,12 @@ For convenience the figures can be located in the `Test_annotation_report.html` 
 
 !!! info
 
-    The database for **cell markers** is stored in the pipeline repository. You can access it [here](https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv). 
+    The database for **cell markers** is stored in the pipeline repository. You can access it [here](https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv).
 
 
 #### 2.1. Cell annotation
 
-The **nonMalignant** cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells. 
+The **nonMalignant** cells were categorized into six distinct populations: B/Plasma Cells, Endothelial Cells, Fibroblasts, Myeloid Cells, T-Cells, and NK Cells.
 
 
 ![Image caption](figures/umap-annotation.png){align=center}

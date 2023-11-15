@@ -915,7 +915,7 @@
 <h2 id="step-by-step">Step-by-step<a class="headerlink" href="#step-by-step" title="Permanent link">#</a></h2>
 <p>In this hands-on section, we will cover several analytical steps. Initially, the pipeline will combine sample matrices into one Seurat object. Subsequently, it will carry out normalization, dimensionality reduction, and clustering. Collectively, these procedures will generate a preliminary clustering used for distinguishing between malignant and non-malignant cells.</p>
 <h3 id="1-running-pipeline">1. Running pipeline<a class="headerlink" href="#1-running-pipeline" title="Permanent link">#</a></h3>
-<p>Currently, the pipeline permits users to modify several parameters, encompassing crucial thresholds like the number of highly variable genes and clustering resolution. Please, see the list below. </p>
+<p>Currently, the pipeline permits users to modify several parameters, encompassing crucial thresholds like the number of highly variable genes and clustering resolution. Please, see the list below.</p>
 <h4 id="11-on-the-hpc">1.1. On the HPC<a class="headerlink" href="#11-on-the-hpc" title="Permanent link">#</a></h4>
 <p>By default the previous command line considers thresholds.</p>
 <div class="admonition info">
@@ -928,7 +928,7 @@
 <li><code>thr_proportion</code>                = 0.25</li>
 </ul>
 </div>
-<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>single_cell_basic.nf<span class="w"> </span>--workflow_level<span class="w"> </span>Basic<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
+<div class="copy highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>--workflow_level<span class="w"> </span>Basic<span class="w"> </span>--project_name<span class="w"> </span>Training<span class="w"> </span>--sample_csv<span class="w"> </span>sample_table.csv<span class="w"> </span>--meta_data<span class="w"> </span>meta_data.csv<span class="w"> </span>--cancer_type<span class="w"> </span>Ovarian<span class="w"> </span>-resume<span class="w"> </span>-profile<span class="w"> </span>seadragon
 </code></pre></div>
 <h4 id="12-on-cirro">1.2. On Cirro<a class="headerlink" href="#12-on-cirro" title="Permanent link">#</a></h4>
 <p>Alternatively, we execute this task on <a href="https://cirro.bio">Cirro</a>.</p>

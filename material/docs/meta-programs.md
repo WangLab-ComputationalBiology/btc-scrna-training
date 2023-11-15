@@ -19,7 +19,7 @@ Meta-program analyses are powerful strategies for uncovering intratumor heteroge
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Malignant --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run main.nf --workflow_level Malignant --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
@@ -46,7 +46,7 @@ For convenience the figures can be located in the `Test_Malignant_meta_report.ht
 
 !!! info
 
-    The database for **meta-programs** is stored in the pipeline repository. You can access it [here](https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv). 
+    The database for **meta-programs** is stored in the pipeline repository. You can access it [here](https://github.com/break-through-cancer/btc-scrna-pipeline/blob/main/assets/cell_markers_database.csv).
 
 #### 2.1. Meta-program and ITH prediction
 

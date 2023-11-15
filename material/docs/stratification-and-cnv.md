@@ -23,7 +23,7 @@ By default the previous command line considers thresholds.
 
 ```{.bash .copy}
 
-nextflow run single_cell_basic.nf --workflow_level Stratification --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
+nextflow run main.nf --workflow_level Stratification --project_name Training --sample_csv sample_table.csv --meta_data meta_data.csv --cancer_type Ovarian -resume -profile seadragon
 
 ```
 
